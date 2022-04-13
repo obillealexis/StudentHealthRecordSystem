@@ -1,0 +1,76 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <!-- Custom fonts for this template-->
+    <link href="~/Content/AdminTemplate/css.css" rel="stylesheet" />
+    <link href="~/Content/AdminTemplate/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template-->
+    <link href="~/Content/AdminTemplate/css/sb-admin-2.min.css" rel="stylesheet" />
+    <link href="~/Content/AdminTemplate/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this page -->
+    <link href="~/Content/AdminTemplate/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+    <meta name="viewport" content="width=device-width" />
+    <title>BCAS-SHRS</title>
+</head>
+<body>
+    <header>    
+    </header>
+
+    <div class="row">
+
+
+        <div class="lg-col-4 well">
+            @RenderSection("Center")
+        </div>
+
+
+    </div>
+
+
+
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span></span>
+            </div>
+        </div>
+    </footer>
+    <script src="~/Content/AdminTemplate/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Content/AdminTemplate/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="~/Content/AdminTemplate/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+
+    <link href="~/Content/AdminTemplate/css/sb-admin-2.min.css" rel="stylesheet" />
+    <!-- Page level plugins -->
+    <script src="~/Content/AdminTemplate/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="~/Content/AdminTemplate/js/demo/chart-area-demo.js"></script>
+    <script src="~/Content/AdminTemplate/js/demo/chart-pie-demo.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="~/Content/AdminTemplate/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Content/AdminTemplate/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="~/Content/AdminTemplate/js/demo/datatables-demo.js"></script>
+    <script src="~/Scripts/CustomScripts/StudentHealthRecord.js"></script>
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

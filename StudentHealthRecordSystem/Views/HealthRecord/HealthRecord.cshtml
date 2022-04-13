@@ -1,0 +1,2774 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<form id="regForm" action="">
+
+    <!-- One "tab" for each step in the form: -->
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+
+            <div class="card-body p-4 p-md-5">
+                <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 text-center text-success">STUDENT'S HEALTH RECORD FORM</h3>
+                <form>
+                    <div class="tab">
+                        <div class="row">
+                            <h5 class="col-md-12 mb-4 text-success">Student Information</h5>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <input type="text" id="FirstName" class="form-control form-control-lg"/>
+                                    <label class="form-label" for="firstName">First Name</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <input type="text" id="MiddleName" class="form-control form-control-lg" />
+                                    <label class="form-label" for="MiddleName">Middle Name</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <input type="text" id="LastName" class="form-control form-control-lg" />
+                                    <label class="form-label" for="lastName">Last Name</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <input type="text" id="StudentNum" class="form-control form-control-lg" />
+                                    <label class="form-label" for="StudentNum">Student Number</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline">
+                                    <select class="form-control form-control-lg" id="Sex" onchange="showDiv(this)">
+                                        <option selected disabled>Select</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                    <label class="form-label" for="Sex">Sex</label>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <input type="date" id="Birthdate" class="form-control form-control-lg" />
+                                    <label class="form-label" for="Birthdate">Date of Birth</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <input type="text" id="Birthplace" class="form-control form-control-lg" />
+                                    <label class="form-label" for="Birthplace">Birth Place</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <input type="text" id="Nationality" class="form-control form-control-lg" />
+                                    <label class="form-label" for="Nationality">Nationality</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <input type="text" id="Religion" class="form-control form-control-lg" />
+                                    <label class="form-label" for="Religion">Religion</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <input type="text" id="ContactNum" class="form-control form-control-lg" />
+                                    <label class="form-label" for="ContactNum">Contact Number</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-12 mb-4">
+
+                                <div class="form-outline">
+                                    <input type="text" id="Address" class="form-control form-control-lg" />
+                                    <label class="form-label" for="Address">Address</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <input type="text" id="FatherName" class="form-control form-control-lg" />
+                                    <label class="form-label" for="FatherName">Father's Name</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <input type="text" id="FatherOccupation" class="form-control form-control-lg" />
+                                    <label class="form-label" for="FOccupation">Occupation</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <input type="text" id="FatherContactNum" class="form-control form-control-lg" />
+                                    <label class="form-label" for="FContact">Contact Number</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <input type="text" id="MotherName" class="form-control form-control-lg" />
+                                    <label class="form-label" for="MotherName">Mother's Name</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <input type="text" id="MotherOccupation" class="form-control form-control-lg" />
+                                    <label class="form-label" for="MOccupation">Occupation</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <input type="text" id="MotherContactNum" class="form-control form-control-lg" />
+                                    <label class="form-label" for="MContact">Contact Number</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <input type="text" id="GuardianName" class="form-control form-control-lg" />
+                                    <label class="form-label" for="">Guardian's Name</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <input type="text" id="GuardianOccupation" class="form-control form-control-lg" />
+                                    <label class="form-label" for="">Occupation</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <input type="text" id="GuardianContactNum" class="form-control form-control-lg" />
+                                    <label class="form-label" for="">Contact Number</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-12 mb-4">
+
+                                <div class="form-outline">
+                                    <input type="text" id="HospitalofChoice" class="form-control form-control-lg" />
+                                    <label class="form-label" for="HospitalChoice">Hospital of Choice for Referral or Admission</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-9 mb-4">
+
+                                <div class="form-outline">
+                                    <input type="text" id="AddressofHospital" class="form-control form-control-lg" />
+                                    <label class="form-label" for="HospitalAdress">Address of Hospital</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-3 mb-4">
+
+                                <div class="form-outline">
+                                    <input type="text" id="HospitalContactNum" class="form-control form-control-lg" />
+                                    <label class="form-label" for="HospitalContactNum">Contact Number</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 mb-4">
+
+                                <div class="form-outline">
+                                    <input type="text" id="NameofFamilyDoctor" class="form-control form-control-lg" />
+                                    <label class="form-label" for="FamilyDoctor">Name of Family Doctor</label>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="tab">
+                        <div class="row">
+                            <h3 class="col-md-12 mb-4 text-success">Past Medical History of Student</h3>
+                            <h6 class="col-md-12 mb-4">Has the child suffered from any of the following?</h6>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Allergy">ALLERGY</label>
+                                    <select class="form-control form-control-lg" id="Allergy"">
+                                        <option value="">Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Asthma">ASTHMA</label>
+                                    <select class="form-control form-control-lg" id="PastAsthma">
+                                        <option value="">Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Anemia">ANEMIA</label>
+                                    <select class="form-control form-control-lg" id="Anemia">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="BleedingProblem">BLEEDING PROBLEM</label>
+                                    <select class="form-control form-control-lg" id="BleedingProblem">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="BehavioralProblem">BEHAVIORAL PROBLEM</label>
+                                    <select class="form-control form-control-lg" id="BehavioralProblem">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="HearingProblem">HEARING PROBLEM</label>
+                                    <select class="form-control form-control-lg" id="HearingProblem">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="SpeechProblem">SPEECH PROBLEM</label>
+                                    <select class="form-control form-control-lg" id="SpeechProblem">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="VisualProblem">VISUAL PROBLEM</label>
+                                    <select class="form-control form-control-lg" id="VisualProblem">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="RecurrentIndigestion">RECURRENT INDIGESTION</label>
+                                    <select class="form-control form-control-lg" id="RecurrentIndigestion">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Jaundice">JAUNDICE</label>
+                                    <select class="form-control form-control-lg" id="Jaundice">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="EatingDisorder">EATING DISORDER</label>
+                                    <select class="form-control form-control-lg" id="EatingDisorder">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="ChickenPox">CHICKEN POX</label>
+                                    <select class="form-control form-control-lg" id="ChickenFox">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="DengueFever">DENGUE FEVER</label>
+                                    <select class="form-control form-control-lg" id="DengueFever">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="ThypoidFever">TYPHOID FEVER</label>
+                                    <select class="form-control form-control-lg" id="ThypoidFever">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Measles">MEASLES</label>
+                                    <select class="form-control form-control-lg" id="Measles">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Mumps">MUMPS</label>
+                                    <select class="form-control form-control-lg" id="Mumps">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Pneumonia">PNEUMONIA</label>
+                                    <select class="form-control form-control-lg" id="Pneumonia">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="PrimaryComplex">PRIMARY COMPLEX</label>
+                                    <select class="form-control form-control-lg" id="PrimaryComplex">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="EarDischarge">EAR DISCHARGE</label>
+                                    <select class="form-control form-control-lg" id="EarDischarge">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Tonsilitis">TONSILITIS</label>
+                                    <select class="form-control form-control-lg" id="Tonsilitis">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Parasitism">PARASITISM</label>
+                                    <select class="form-control form-control-lg" id="Parasitism">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Insomnias">INSOMNIAS</label>
+                                    <select class="form-control form-control-lg" id="Insomnias">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="HearthDiseases">HEARTH DISEASES</label>
+                                    <select class="form-control form-control-lg" id="HeartDisease">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="KidneyDiseases">KIDNEY DISEASES</label>
+                                    <select class="form-control form-control-lg" id="KidneyDisease">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Convulsion">CONVULSION</label>
+                                    <select class="form-control form-control-lg" id="Convulsion">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Epilepsy">EPILEPSY</label>
+                                    <select class="form-control form-control-lg" id="Epilepsy">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Diabetes">DIABETES</label>
+                                    <select class="form-control form-control-lg" id="PastDiabetes">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Fainting">FAINTING</label>
+                                    <select class="form-control form-control-lg" id="Fainting">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Fractures">FRACTURES</label>
+                                    <select class="form-control form-control-lg" id="Fractures">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Scoliosis">SCOLIOSIS</label>
+                                    <select class="form-control form-control-lg" id="Scolosis">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Hospitalization">HOSPITALIZATION</label>
+                                    <select class="form-control form-control-lg" id="Hospitalization">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Operation">OPERATION</label>
+                                    <select class="form-control form-control-lg" id="Operation">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab">
+                        <div class="row">
+                            <h3 class="col-md-12 mb-4 text-success">Family Medical History</h3>
+                            <h6 class="col-md-12 mb-4">Has any of the members of the family suffered from the following?</h6>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">CANCER</label>
+                                    <select class="form-control form-control-lg" id="Cancer" onchange="CancerED(this)">
+                                        <option value="Select">Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Relation of the Student</label>
+                                    <select class="form-control form-control-lg" id="CancerRelation" disabled>
+                                        <option value="None"> </option>
+                                        <option value="Relatives">Relatives</option>
+                                        <option value="Parent">Parent</option>
+                                        <option value="Sibling">Sibling</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">HEART PROBLEM</label>
+                                    <select class="form-control form-control-lg" id="HeartProblem" onchange="HeartProblemED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Relation of the Student</label>
+                                    <select class="form-control form-control-lg" id="HeartRelationProblem" disabled>
+                                        <option value="None"> </option>
+                                        <option value="Relatives">Relatives</option>
+                                        <option value="Parent">Parent</option>
+                                        <option value="Sibling">Sibling</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">HIGH BLOOD</label>
+                                    <select class="form-control form-control-lg" id="HighBlood" onchange="HighBloodED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Relation of the Student</label>
+                                    <select class="form-control form-control-lg" id="HighBloodRelation" disabled>
+                                        <option value="None"> </option>
+                                        <option value="Relatives">Relatives</option>
+                                        <option value="Parent">Parent</option>
+                                        <option value="Sibling">Sibling</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">DIABETES</label>
+                                    <select class="form-control form-control-lg" id="FamilyDiabetes" onchange="FamilyDiabetesED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Relation of the Student</label>
+                                    <select class="form-control form-control-lg" id="DiabetesRelation" disabled>
+                                        <option value="None"> </option>
+                                        <option value="Relatives">Relatives</option>
+                                        <option value="Parent">Parent</option>
+                                        <option value="Sibling">Sibling</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">KIDNEY PROBLEM</label>
+                                    <select class="form-control form-control-lg" id="KidneyProblem" onchange="KidneyProblemED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Relation of the Student</label>
+                                    <select class="form-control form-control-lg" id="KidneyProblemRelation" disabled>
+                                        <option value="None"> </option>
+                                        <option value="Relatives">Relatives</option>
+                                        <option value="Parent">Parent</option>
+                                        <option value="Sibling">Sibling</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">SEIZURE DISORDER</label>
+                                    <select class="form-control form-control-lg" id="SeizureDisorder" onchange="SeizureDisorderED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Scoliosis">Relation of the Student</label>
+                                    <select class="form-control form-control-lg" id="SeizureDisorderRelation" disabled>
+                                        <option value="None"> </option>
+                                        <option value="Relatives">Relatives</option>
+                                        <option value="Parent">Parent</option>
+                                        <option value="Sibling">Sibling</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">TUBERCULOSIS</label>
+                                    <select class="form-control form-control-lg" id="Tubercolosis" onchange="TubercolosisED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Relation of the Student</label>
+                                    <select class="form-control form-control-lg" id="TubercolosisRelation" disabled>
+                                        <option value="None"> </option>
+                                        <option value="Relatives">Relatives</option>
+                                        <option value="Parent">Parent</option>
+                                        <option value="Sibling">Sibling</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">ASTHMA</label>
+                                    <select class="form-control form-control-lg" id="FamilyAsthma" onchange="FamilyAsthmaED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Relation of the Student</label>
+                                    <select class="form-control form-control-lg" id="AsthmaRelation" disabled>
+                                        <option value="None"> </option>
+                                        <option value="Relatives">Relatives</option>
+                                        <option value="Parent">Parent</option>
+                                        <option value="Sibling">Sibling</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">BLEEDING DISORDER</label>
+                                    <select class="form-control form-control-lg" id="BleedingDisorder" onchange="BleedingDisorderED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Relation of the Student</label>
+                                    <select class="form-control form-control-lg" id="BleedingDisorderRelation" disabled>
+                                        <option value="None"> </option>
+                                        <option value="Relatives">Relatives</option>
+                                        <option value="Parent">Parent</option>
+                                        <option value="Sibling">Sibling</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">MENTAL DISORDER</label>
+                                    <select class="form-control form-control-lg" id="MentalDisorder" onchange="MentalDisorderED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Relation of the Student</label>
+                                    <select class="form-control form-control-lg" id="MentalDisorderRelation" disabled>
+                                        <option value="None"> </option>
+                                        <option value="Relatives">Relatives</option>
+                                        <option value="Parent">Parent</option>
+                                        <option value="Sibling">Sibling</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">STROKE</label>
+                                    <select class="form-control form-control-lg" id="Stroke" onchange="StrokeED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Relation of the Student</label>
+                                    <select class="form-control form-control-lg" id="StrokeRelation" disabled>
+                                        <option value="None"> </option>
+                                        <option value="Relatives">Relatives</option>
+                                        <option value="Parent">Parent</option>
+                                        <option value="Sibling">Sibling</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">OBESITY</label>
+                                    <select class="form-control form-control-lg" id="Obesity" onchange="ObesityED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Relation of the Student</label>
+                                    <select class="form-control form-control-lg" id="ObesityRelation" disabled>
+                                        <option value="None"> </option>
+                                        <option value="Relatives">Relatives</option>
+                                        <option value="Parent">Parent</option>
+                                        <option value="Sibling">Sibling</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="row">
+                            <h3 class="col-md-12 mb-4 text-success">Psychological History</h3>
+                            <h6 class="col-md-12 mb-4">Has the child suffered from any of the following?</h6>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">PHYSICAL ABUSE</label>
+                                    <select class="form-control form-control-lg" id="Physical" onchange="PhysicalED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">If Yes, Please give relevant details</label>
+                                    <input type="text" id="PhysicalRelevantDetails" value="ss" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">SEXUAL ABUSE</label>
+                                    <select class="form-control form-control-lg" id="Sexual" onchange="SexualED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">If Yes, Please give relevant details</label>
+                                    <input type="text" id="SexualRelevantDetails" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">VERBAL ABUSE</label>
+                                    <select class="form-control form-control-lg" id="Verbal" onchange="VerbalED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">If Yes, Please give relevant details</label>
+                                    <input type="text" id="VerbalRelevantDetails" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*<div class="tab">
+                        <div class="row">
+                            <div id="MaleOnly" style="display:none;" class="col-md-12 mb-4 form-label text-center">
+                                <h3 class="col-md-12 mb-4 text-success">Other Medical Information of Student</h3>
+                                <label id="MalePart" class="col-md-12 mb-4 form-label text-center text-success" for="">FOR MALE STUDENT/CHILD</label>
+                                <div id="AOOOGE1" class="col-md-6 mb-4">
+                                    <div class="form-outline text-center">
+                                        <label class="form-label" for="">Age of onset of genital enlargement</label>
+                                        <input type="text" id="AOOOGE" class="form-control form-control-lg" />
+                                    </div>
+                                </div>
+                                <div id="AOOOPH1" class="col-md-6 mb-4">
+                                    <div class="form-outline text-center">
+                                        <label class="form-label" for="">Age of onset pubic hair</label>
+                                        <input type="text" id="AOOOPH" class="form-control form-control-lg" />
+                                    </div>
+                                </div>
+                                <div id="Hernia1" class="col-md-6 mb-4">
+                                    <div class="form-outline text-center">
+                                        <label class="form-label" for="">Did your child suffer from Hernia?</label>
+                                        <select class="form-control form-control-lg" id="Hernia" onchange="EDHernia(this)">
+                                            <option value="None">Select</option>
+                                            <option value="No">No</option>
+                                            <option value="Yes">Yes</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="HerniaDate1" class="col-md-6 mb-4">
+                                    <div class="form-outline text-center">
+                                        <label class="form-label" for="">If yes, when?</label>
+                                        <input type="text" id="HerniaDate" class="form-control form-control-lg" disabled/>
+
+                                    </div>
+                                </div>
+                                <div id="Circumcision1" class="col-md-6 mb-4">
+                                    <div class="form-outline text-center">
+                                        <label class="form-label" for="">Circumcision?</label>
+                                        <select class="form-control form-control-lg" id="Circumcision" onchange="EDCircumcision(this)">
+                                            <option value="None">Select</option>
+                                            <option value="No">Not done</option>
+                                            <option value="Yes">Done</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="CircumcisionDate1" class="col-md-6 mb-4">
+                                    <div class="form-outline text-center">
+                                        <label class="form-label" for="">If done, when?</label>
+                                        <input type="text" id="CircumcisionDate" class="form-control form-control-lg" disabled />
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="FemaleOnly" style="display:none;" class="col-md-12 mb-4 form-label text-center">
+                                <label id="FemalePart" class="col-md-12 mb-4 form-label text-center" for="">FOR FEMALE STUDENT/CHILD</label>
+                                <div id="AOOOM1" class="col-md-6 mb-4">
+                                    <div class="form-outline text-center">
+                                        <label class="form-label" for="">Age of onset of menstruation</label>
+                                        <input type="text" id="AOOOM" class="form-control form-control-lg" />
+                                    </div>
+                                </div>
+                                <div id="RegularCycle1" class="col-md-6 mb-4">
+                                    <div class="form-outline text-center">
+                                        <label class="form-label" for="">Is cycle regular?</label>
+                                        <select class="form-control form-control-lg" id="RegularCycle">
+                                            <option>Select</option>
+                                            <option value="No">No</option>
+                                            <option value="Yes">Yes</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="Flow1" class="col-md-6 mb-4">
+                                    <div class="form-outline text-center">
+                                        <label class="form-label" for="">Menstruation Flow</label>
+                                        <select class="form-control form-control-lg" id="Flow">
+                                            <option value="Minimal">Minimal</option>
+                                            <option value="Maximum">Maximum</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="Discomfort1" class="col-md-6 mb-4">
+                                    <div class="form-outline text-center">
+                                        <label class="form-label" for="">Menstruation Discomfort</label>
+                                        <select class="form-control form-control-lg" id="Discomfort">
+                                            <option value="None">None</option>
+                                            <option value="Moderate">Moderate</option>
+                                            <option value="Severe">Severe</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">1. Is your child under medical treatment?</label>
+                                    <select class="form-control form-control-lg" id="OMIOS1" onchange="ED1(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">If Yes, for what?</label>
+                                    <input type="text" id="OMIOS11" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Please specify medicine/s, its dosage and schedule.</label>
+                                    <input type="text" id="OMIOS12" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label"><br> Is school nurse assistance required?</label>
+                                    <select class="form-control form-control-lg" id="OMIOS13"disabled>
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">2. Does your child ever have psychiatric evaluation?</label>
+                                    <select class="form-control form-control-lg" id="OMIOS2" onchange="ED2(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for=""><br> If Yes, explain?</label>
+                                    <input type="text" id="OMIOSB22" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">3. Have your child undergone X-ray procedure?</label>
+                                    <select class="form-control form-control-lg" id="OMIOS3" onchange="ED3(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for=""><br> If Yes, when?</label>
+                                    <input type="text" id="OMIOS33" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for=""> for what?</label>
+                                    <input type="text" id="OMIOS34" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">What is the result?</label>
+                                    <input type="text" id="OMIOS35" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Examined by whom?</label>
+                                    <input type="text" id="OMIOS36" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for=""></label>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">4. Have your child had a tuberculin skin test within the last years?</label>
+                                    <select class="form-control form-control-lg" id="OMIOS4" onchange="ED4(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" ><br> If Yes, indicate the result</label>
+                                    <select class="form-control form-control-lg" id="OMIOS44" disabled>
+                                        <option>Select</option>
+                                        <option value="No">Negative</option>
+                                        <option value="Yes">Positive</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">5. When was the last dental check-up of your child?</label>
+                                    <input type="text" id="OMIOS5" class="form-control form-control-lg" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for=""></label>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">6. Does your child have any medical/physical condition which would require a special treatment?</label>
+                                    <select class="form-control form-control-lg" id="OMIOS6" onchange="ED5(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for=""><br><br> If Yes, explain?</label>
+                                    <input type="text" id="OMIOS66" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="row">
+                            <h3 class="col-md-12 mb-4 text-success">Review of System</h3>
+                            <h6 class="col-md-12 mb-4">Have your child ever had or has any of the following? If YES, at what age?</h6>
+                            <h4 class="col-md-12 mb-4 text-success">HEAD</h4>
+
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">headache, frequent or severe</label>
+                                    <select class="form-control form-control-lg" id="HeadA" onchange="HeadAED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="HeadAAge" class="form-control form-control-lg" disabled>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">dizziness or fainting spell</label>
+                                    <select class="form-control form-control-lg" id="HeadB" onchange="HeadBED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="HeadBAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">severe head injury</label>
+                                    <select class="form-control form-control-lg" id="HeadC" onchange="HeadCED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="HeadCAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <h4 class="col-md-12 mb-4 text-success">EYES</h4>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">worn glasses</label>
+                                    <select class="form-control form-control-lg" id="EyesA" onchange="EyesAED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="EyesAAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">worn contact lens</label>
+                                    <select class="form-control form-control-lg" id="EyesB" onchange="EyesBED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="EyesBAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">eye trouble</label>
+                                    <select class="form-control form-control-lg" id="EyesC" onchange="EyesCED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="EyesCAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <h4 class="col-md-12 mb-4 text-success">EARS, NOSE, THROAT</h4>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">ear, nose, throat trouble</label>
+                                    <select class="form-control form-control-lg" id="ENTA" onchange="ENTAED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="ENTAAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">difficuty in hearing</label>
+                                    <select class="form-control form-control-lg" id="ENTB" onchange="ENTBED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="ENTBAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">worn hearing aid</label>
+                                    <select class="form-control form-control-lg" id="ENTC" onchange="ENTCED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="ENTCAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">ruptuned or perforated ear drum</label>
+                                    <select class="form-control form-control-lg" id="ENTD" onchange="ENTDED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="ENTDAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">chronic running ear or fungus infection</label>
+                                    <select class="form-control form-control-lg" id="ENTE" onchange="ENTEED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="ENTEAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">chronic of prequent colds</label>
+                                    <select class="form-control form-control-lg" id="ENTF" onchange="ENTFED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="ENTFAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">stuttered, stammered or lisped</label>
+                                    <select class="form-control form-control-lg" id="ENTG" onchange="ENTGED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="ENTGAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">severe tooth or gum trouble</label>
+                                    <select class="form-control form-control-lg" id="ENTH" onchange="ENTHED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="ENTHAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">bleeds excessively after injury</label>
+                                    <select class="form-control form-control-lg" id="ENTI" onchange="ENTIED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="ENTIAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">sinusitis</label>
+                                    <select class="form-control form-control-lg" id="ENTJ" onchange="ENTJED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="ENTJAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">hay fever / allergic rhinitis</label>
+                                    <select class="form-control form-control-lg" id="ENTK" onchange="ENTKED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="ENTKAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">sore throats, frequent or severe</label>
+                                    <select class="form-control form-control-lg" id="ENTL" onchange="ENTLED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="ENTLAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">tonsils or adenoids removed</label>
+                                    <select class="form-control form-control-lg" id="ENTM" onchange="ENTMED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="ENTMAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">operation of nose</label>
+                                    <select class="form-control form-control-lg" id="ENTN" onchange="ENTNED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="ENTNAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="row">
+                            <h3 class="col-md-12 mb-4 text-success">Review of System</h3>
+                            <h6 class="col-md-12 mb-4">Have your child ever had or has any of the following? If YES, at what age?</h6>
+                            <h4 class="col-md-12 mb-4 text-success">NECK</h4>
+
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">enlarged mass</label>
+                                    <select class="form-control form-control-lg" id="NeckA" onchange="NeckAED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="NeckAAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">lymphadenitis</label>
+                                    <select class="form-control form-control-lg" id="NeckB" onchange="NeckBED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="NeckBAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <h4 class="col-md-12 mb-4 text-success">HEART & LUNGS</h4>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">tubercolosis</label>
+                                    <select class="form-control form-control-lg" id="HLA" onchange="HLAED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="HLAAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">asthma</label>
+                                    <select class="form-control form-control-lg" id="HLB" onchange="HLBED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="HLBAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">shortness of breath</label>
+                                    <select class="form-control form-control-lg" id="HLC" onchange="HLCED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="HLCAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">pain or pressure in chest</label>
+                                    <select class="form-control form-control-lg" id="HLD" onchange="HLDED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="HLDAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">chronic cough</label>
+                                    <select class="form-control form-control-lg" id="HLE" onchange="HLEED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="HLEAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">palpitation or pounding heart</label>
+                                    <select class="form-control form-control-lg" id="HLF" onchange="HLFED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="HLFAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">heart trouble or murmur</label>
+                                    <select class="form-control form-control-lg" id="HLG" onchange="HLGED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="HLGAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">high blood pressure</label>
+                                    <select class="form-control form-control-lg" id="HLH" onchange="HLHED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="HLHAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">pneumonia</label>
+                                    <select class="form-control form-control-lg" id="HLI" onchange="HLIED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="HLIAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Others</label>
+                                    <input type="text" id="HLJ" class="form-control form-control-lg" />
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="HLJAge" class="form-control form-control-lg" />
+                                </div>
+                            </div>
+                            <h4 class="col-md-12 mb-4 text-success">ABDOMEN</h4>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">ulcer of stomach or duodenum</label>
+                                    <select class="form-control form-control-lg" id="AbdomenA" onchange="AbdomenAED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="AbdomenAAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">diarrhea, chronic or recurrent</label>
+                                    <select class="form-control form-control-lg" id="AbdomenB" onchange="AbdomenBED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="AbdomenBAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">gall bladder diesase</label>
+                                    <select class="form-control form-control-lg" id="AbdomenC" onchange="AbdomenCED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="AbdomenCAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">jaundice</label>
+                                    <select class="form-control form-control-lg" id="AbdomenD" onchange="AbdomenDED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="AbdomenDAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">tumor growth, cyst, cancer</label>
+                                    <select class="form-control form-control-lg" id="AbdomenE" onchange="AbdomenEED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="AbdomenEAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">hernia(rupture)</label>
+                                    <select class="form-control form-control-lg" id="AbdomenF" onchange="AbdomenFED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="AbdomenFAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">appendicitis operation</label>
+                                    <select class="form-control form-control-lg" id="AbdomenG" onchange="AbdomenGED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="AbdomenGAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">hemorrhoids(piles) or rectal disease</label>
+                                    <select class="form-control form-control-lg" id="AbdomenH" onchange="AbdomenHED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="AbdomenHAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">frequent painful urination</label>
+                                    <select class="form-control form-control-lg" id="AbdomenI" onchange="AbdomenIED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="AbdomenIAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">kidney stone or blood in urine</label>
+                                    <select class="form-control form-control-lg" id="AbdomenJ" onchange="AbdomenJED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="AbdomenJAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">sugar or albumin in urine</label>
+                                    <select class="form-control form-control-lg" id="AbdomenK" onchange="AbdomenKED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="AbdomenKAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">abdominal pain</label>
+                                    <select class="form-control form-control-lg" id="AbdomenL" onchange="AbdomenLED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="AbdomenLAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="row">
+                            <h3 class="col-md-12 mb-4 text-success">Review of System</h3>
+                            <h6 class="col-md-12 mb-4">Have your child ever had or has any of the following? If YES, at what age?</h6>
+                            <h4 class="col-md-12 mb-4 text-success">BONE JOINT</h4>
+
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">swollen or painful joints</label>
+                                    <select class="form-control form-control-lg" id="BoneJointA" onchange="BoneJointAED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="BoneJointAAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">worn neck or back brace support</label>
+                                    <select class="form-control form-control-lg" id="BoneJointB" onchange="BoneJointBED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="BoneJointBAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">bone or joint disability or deformity</label>
+                                    <select class="form-control form-control-lg" id="BoneJointC" onchange="BoneJointCED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="BoneJointCAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">loss of arm, leg, finger or toe</label>
+                                    <select class="form-control form-control-lg" id="BoneJointD" onchange="BoneJointDED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="BoneJointDAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">painful or trick shoulder or elbow</label>
+                                    <select class="form-control form-control-lg" id="BoneJointE" onchange="BoneJointEED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="BoneJointEAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">tricked or locked knee</label>
+                                    <select class="form-control form-control-lg" id="BoneJointF" onchange="BoneJointFED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="BoneJointFAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">varicose veins</label>
+                                    <select class="form-control form-control-lg" id="BoneJointG" onchange="BoneJointGED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="BoneJointGAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">foot trouble</label>
+                                    <select class="form-control form-control-lg" id="BoneJointH" onchange="BoneJointHED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="BoneJointHAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">osteomyelitis</label>
+                                    <select class="form-control form-control-lg" id="BoneJointI" onchange="BoneJointIED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="BoneJointIAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">paralysis(including poliomyelitis)</label>
+                                    <select class="form-control form-control-lg" id="BoneJointJ" onchange="BoneJointJED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="BoneJointJAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <h4 class="col-md-12 mb-4 text-success">NERVOUS SYSTEM</h4>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">convulsion or epilepsy</label>
+                                    <select class="form-control form-control-lg" id="NervousSystemA" onchange="NervousSystemAED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="NervousSystemAAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">difficulty in going to sleep</label>
+                                    <select class="form-control form-control-lg" id="NervousSystemB" onchange="NervousSystemBED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="NervousSystemBAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">excessive moods of gloom or cheerfulness</label>
+                                    <select class="form-control form-control-lg" id="NervousSystemC" onchange="NervousSystemCED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="NervousSystemCAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">previous psychiatric treatment</label>
+                                    <select class="form-control form-control-lg" id="NervousSystemD" onchange="NervousSystemDED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="NervousSystemDAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">difficulty in concentration</label>
+                                    <select class="form-control form-control-lg" id="NervousSystemE" onchange="NervousSystemEED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="NervousSystemEAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">loss of memory or amnesia</label>
+                                    <select class="form-control form-control-lg" id="NervousSystemF" onchange="NervousSystemFED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="NervousSystemFAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">excessive sleepiness</label>
+                                    <select class="form-control form-control-lg" id="NervousSystemG" onchange="NervousSystemGED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="NervousSystemGAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <h4 class="col-md-12 mb-4 text-success">CHRONIC DISEASES</h4>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">diabetes</label>
+                                    <select class="form-control form-control-lg" id="ChronicDiseasesA" onchange="ChronicDiseasesAED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="ChronicDiseasesAAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">recurrent boils</label>
+                                    <select class="form-control form-control-lg" id="ChronicDiseasesB" onchange="ChronicDiseasesBED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="ChronicDiseasesBAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">recent gain or loss of weight</label>
+                                    <select class="form-control form-control-lg" id="ChronicDiseasesC" onchange="ChronicDiseasesCED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="ChronicDiseasesCAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">chronic skin disease</label>
+                                    <select class="form-control form-control-lg" id="ChronicDiseasesD" onchange="ChronicDiseasesDED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="ChronicDiseasesDAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">rheumatic fever</label>
+                                    <select class="form-control form-control-lg" id="ChronicDiseasesE" onchange="ChronicDiseasesEED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="ChronicDiseasesEAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Others</label>
+                                    <input type="text" id="ChronicDiseasesF" class="form-control form-control-lg" />
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="ChronicDiseasesFAge" class="form-control form-control-lg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="row">
+                            <h3 class="col-md-12 mb-4 text-success">Review of System</h3>
+                            <h6 class="col-md-12 mb-4">Have your child ever had or has any of the following? If YES, at what age?</h6>
+                            <h4 class="col-md-12 mb-4 text-success">INFECTIOUS DISEASES</h4>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">infectious hepatitis(liver disease)</label>
+                                    <select class="form-control form-control-lg" id="InfectiousDiseasesA" onchange="InfectiousDiseasesAED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="InfectiousDiseasesAAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">infectious mononucleosis</label>
+                                    <select class="form-control form-control-lg" id="InfectiousDiseasesB" onchange="InfectiousDiseasesBED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="InfectiousDiseasesBAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">malaria</label>
+                                    <select class="form-control form-control-lg" id="InfectiousDiseasesC" onchange="InfectiousDiseasesCED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="InfectiousDiseasesCAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">mumps</label>
+                                    <select class="form-control form-control-lg" id="InfectiousDiseasesD" onchange="InfectiousDiseasesDED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="InfectiousDiseasesDAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">venereal disease</label>
+                                    <select class="form-control form-control-lg" id="InfectiousDiseasesE" onchange="InfectiousDiseasesEED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="InfectiousDiseasesEAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">whooping cough</label>
+                                    <select class="form-control form-control-lg" id="InfectiousDiseasesF" onchange="InfectiousDiseasesFED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="InfectiousDiseasesFAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">chicken pox</label>
+                                    <select class="form-control form-control-lg" id="InfectiousDiseasesG" onchange="InfectiousDiseasesGED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="InfectiousDiseasesGAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">rubella(german measles)</label>
+                                    <select class="form-control form-control-lg" id="InfectiousDiseasesH" onchange="InfectiousDiseasesHED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="InfectiousDiseasesHAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">meningitis</label>
+                                    <select class="form-control form-control-lg" id="InfectiousDiseasesI" onchange="InfectiousDiseasesIED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="InfectiousDiseasesIAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">scarlet fever</label>
+                                    <select class="form-control form-control-lg" id="InfectiousDiseasesJ" onchange="InfectiousDiseasesJED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="InfectiousDiseasesJAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Others</label>
+                                    <input type="text" id="InfectiousDiseasesK" class="form-control form-control-lg" />
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="InfectiousDiseasesKAge" class="form-control form-control-lg" />
+                                </div>
+                            </div>
+                            <h4 class="col-md-12 mb-4 text-success">DID YOUR CHILD TAKE ANY MEDICINE SUCH AS:</h4>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">insulin</label>
+                                    <select class="form-control form-control-lg" id="MedicineA" onchange="MedicineAED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="MedicineAAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">thyroid medications</label>
+                                    <select class="form-control form-control-lg" id="MedicineB" onchange="MedicineBED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="MedicineBAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">dilantin</label>
+                                    <select class="form-control form-control-lg" id="MedicineC" onchange="MedicineCED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="MedicineCAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">phenobarbital</label>
+                                    <select class="form-control form-control-lg" id="MedicineD" onchange="MedicineDED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="MedicineDAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">digitalis</label>
+                                    <select class="form-control form-control-lg" id="MedicineE" onchange="MedicineEED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="MedicineEAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">allergy injections</label>
+                                    <select class="form-control form-control-lg" id="MedicineF" onchange="MedicineFED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="MedicineFAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">penicillin</label>
+                                    <select class="form-control form-control-lg" id="MedicineG" onchange="MedicineGED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="MedicineGAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">tranquilizers</label>
+                                    <select class="form-control form-control-lg" id="MedicineH" onchange="MedicineHED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="MedicineHAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Others</label>
+                                    <input type="text" id="MedicineI" class="form-control form-control-lg" />
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="MedicineIAge" class="form-control form-control-lg" />
+                                </div>
+                            </div>
+                            <h4 class="col-md-12 mb-4 text-success">DID YOUR CHILD SUFFER FROM AN UNFAVORABLE REACTION TO:</h4>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">penicillin</label>
+                                    <select class="form-control form-control-lg" id="UnfavorableA" onchange="UnfavorableAED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="UnfavorableAAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">horse serum(e.g. antitoxin)</label>
+                                    <select class="form-control form-control-lg" id="UnfavorableB" onchange="UnfavorableBED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="UnfavorableBAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">procaine or novocaine</label>
+                                    <select class="form-control form-control-lg" id="UnfavorableC" onchange="UnfavorableCED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="UnfavorableCAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">antibiotics</label>
+                                    <select class="form-control form-control-lg" id="UnfavorableD" onchange="UnfavorableDED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="UnfavorableDAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">sulfa</label>
+                                    <select class="form-control form-control-lg" id="UnfavorableE" onchange="UnfavorableEED(this)">
+                                        <option>Select</option>
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="UnfavorableEAge" class="form-control form-control-lg" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Others</label>
+                                    <input type="text" id="UnfavorableF" class="form-control form-control-lg" />
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label>
+                                    <input type="text" id="UnfavorableFAge" class="form-control form-control-lg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="row">
+                            
+                            <div class="col-md-12 mb-4">
+                                <div class="form-outline">
+                                    <h4 class="col-md-12 mb-4 text-center text-success">CONSENT FOR TREATMENT</h4>
+                                    <label class="form-label" for="">I hereby authorize and give my consent to BCAS health care providers to examine and/or treat my child for minur injury
+                                    or illness. In the event of an emergency, I give permission to the school health care provider to secure appropriate treatment, including transport
+                                    to the nearest hospital, if necessary. I also allow any school health care provider to release any PERTINENT medical information to other health care providers
+                                    that may be necessary for treatment in such eventuality.</label>
+                                    <label class="form-label" for=""><br>Furthermore, I hereby state that the above information are true and correct to the best of my knowledge and I shall not hold the 
+                                    school and its personnel responsible for any information that I may have neglected consciously or unconsciously. <br><br></label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center" >
+                                    <input type="text" id="ConcentName" class="form-control form-control-lg" />
+                                    <label class="form-label" for="MotherName">Name of Parent or Guardian</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <select class="form-control form-control-lg" id="ConsentRelationship">
+                                        <option value="None"> </option>
+                                        <option value="Relatives">Relatives</option>
+                                        <option value="Parent">Parent</option>
+                                        <option value="Sibling">Sibling</option>
+                                    </select>
+                                    <label class="form-label" for="">Relation to the Student</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-1 mb-4">
+                                <div class="form-outline text-center">                                 
+                                    <input type="checkbox" id="vehicle1" name="vehicle1" style="transform: scale(1.7);" >
+                                </div>
+                            </div>
+
+                            <div class="col-md-11 mb-4">
+                                <div class="form-outline">
+                                    <label class="form-label" for="">By clicking here, I state that I have read and understood the consent for treatment.</label>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                        </div>*@
+
+                    <div style="overflow:auto;">
+                        <div style="float:right;">
+                            <button type="button" id="prevBtn" class="btn btn-secondary" onclick="nextPrev(-1)">Previous</button>
+                            <button type="button" id="nextBtn" class="btn btn-primary" onclick="nextPrev(1)">Next</button>
+                        </div>
+                    </div>
+
+                    <!-- Circles which indicates the steps of the form: -->
+                    <div style="text-align:center;margin-top:40px;">
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/CustomScript/HealthRecord.js"></script>
+</form>
+
+<script src="~/Scripts/CustomScript/EnableDisable.js"></script>
+<script src="~/Scripts/CustomScript/EnableDisable2.js"></script>
+<script src="~/Scripts/CustomScript/EED.js"></script>
+<script type="text/javascript">
+    function showDiv(select){
+        if (select.value == "Female")
+            {
+                document.getElementById('FemaleOnly').style.display = "block";
+                document.getElementById('MaleOnly').style.display = "none";
+
+            }
+        else
+            {
+                document.getElementById('FemaleOnly').style.display = "none";
+                document.getElementById('MaleOnly').style.display = "block";
+            }
+    }
+
+    //function enableDisable(select){
+    //    if (select.value == 2) {
+    //        document.getElementById("CancerRelation").disabled = false;
+    //        document.getElementById("HeartRelationProblem").disabled = false;
+    //    }
+    //    else
+    //    {
+    //        document.getElementById("CancerRelation").disabled = true;
+    //        document.getElementById("HeartRelationProblem").disabled = true;
+    //    }
+    //}
+</script>
+<style>
+    #regForm {
+        background-color: #ffffff;
+        padding: 40px;
+        min-width: 50px;
+    }
+
+    /* Style the input fields */
+    input {
+        padding: 10px;
+        width: 100%;
+        font-size: 17px;
+        font-family: Raleway;
+        border: 1px solid #aaaaaa;
+    }
+
+        /* Mark input boxes that gets an error on validation: */
+        input.invalid {
+            background-color: #ffdddd;
+        }
+        option.invalid {
+            background-color: #ffdddd;
+        }
+        select.invalid {
+            background-color: #ffdddd;
+        }
+
+    /* Hide all steps by default: */
+    .tab {
+        display: none;
+    }
+
+    /* Make circles that indicate the steps of the form: */
+    .step {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbbbbb;
+        border: none;
+        border-radius: 50%;
+        display: inline-block;
+        opacity: 0.5;
+    }
+
+        /* Mark the active step: */
+        .step.active {
+            opacity: 1;
+        }
+
+        /* Mark the steps that are finished and valid: */
+        .step.finish {
+            background-color: #04AA6D;
+        }
+</style>
+
+<script src="~/Scripts/CustomScript/Stepper.js"></script>

@@ -1,0 +1,1959 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="StudentHealthRecordDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="APIPendingTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentNum" Type="nvarchar(max)" />
+          <Property Name="Firstname" Type="nvarchar(max)" />
+          <Property Name="Lastname" Type="nvarchar(max)" />
+          <Property Name="Middlename" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="PublicHealthRecordTable">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar(max)" />
+          <Property Name="MiddleName" Type="nvarchar(max)" />
+          <Property Name="LastName" Type="nvarchar(max)" />
+          <Property Name="StudentNum" Type="nvarchar(max)" />
+          <Property Name="Sex" Type="nvarchar(max)" />
+          <Property Name="Birthdate" Type="date" />
+          <Property Name="Birthplace" Type="nvarchar(max)" />
+          <Property Name="Nationality" Type="nvarchar(max)" />
+          <Property Name="Religion" Type="nvarchar(max)" />
+          <Property Name="ContactNum" Type="nvarchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="FatherName" Type="nvarchar(max)" />
+          <Property Name="FatherOccupation" Type="nvarchar(max)" />
+          <Property Name="FatherContactNum" Type="nvarchar(max)" />
+          <Property Name="MotherName" Type="nvarchar(max)" />
+          <Property Name="MotherOccupation" Type="nvarchar(max)" />
+          <Property Name="MotherContactNum" Type="nvarchar(max)" />
+          <Property Name="GuardianName" Type="nvarchar(max)" />
+          <Property Name="GuardianOccupation" Type="nvarchar(max)" />
+          <Property Name="GuardianContactNum" Type="nvarchar(max)" />
+          <Property Name="HospitalofChoice" Type="nvarchar(max)" />
+          <Property Name="AddressofHospital" Type="nvarchar(max)" />
+          <Property Name="HospitalContactNum" Type="nvarchar(max)" />
+          <Property Name="NameofFamilyDoctor" Type="nvarchar(max)" />
+          <Property Name="Allergy" Type="nvarchar(max)" />
+          <Property Name="PastAsthma" Type="nvarchar(max)" />
+          <Property Name="Anemia" Type="nvarchar(max)" />
+          <Property Name="BleedingProblem" Type="nvarchar(max)" />
+          <Property Name="BehavioralProblem" Type="nvarchar(max)" />
+          <Property Name="HearingProblem" Type="nvarchar(max)" />
+          <Property Name="SpeechProblem" Type="nvarchar(max)" />
+          <Property Name="VisualProblem" Type="nvarchar(max)" />
+          <Property Name="RecurrentIndigestion" Type="nvarchar(max)" />
+          <Property Name="Jaundice" Type="nvarchar(max)" />
+          <Property Name="EatingDisorder" Type="nvarchar(max)" />
+          <Property Name="ChickenFox" Type="nvarchar(max)" />
+          <Property Name="DengueFever" Type="nvarchar(max)" />
+          <Property Name="ThypoidFever" Type="nvarchar(max)" />
+          <Property Name="Measles" Type="nvarchar(max)" />
+          <Property Name="Mumps" Type="nvarchar(max)" />
+          <Property Name="Pneumonia" Type="nvarchar(max)" />
+          <Property Name="PrimaryComplex" Type="nvarchar(max)" />
+          <Property Name="EarDischarge" Type="nvarchar(max)" />
+          <Property Name="Tonsilitis" Type="nvarchar(max)" />
+          <Property Name="Parasitism" Type="nvarchar(max)" />
+          <Property Name="Insomnias" Type="nvarchar(max)" />
+          <Property Name="HeartDisease" Type="nvarchar(max)" />
+          <Property Name="KidneyDisease" Type="nvarchar(max)" />
+          <Property Name="Convulsion" Type="nvarchar(max)" />
+          <Property Name="Epilepsy" Type="nvarchar(max)" />
+          <Property Name="PastDiabetes" Type="nvarchar(max)" />
+          <Property Name="Fainting" Type="nvarchar(max)" />
+          <Property Name="Fractures" Type="nvarchar(max)" />
+          <Property Name="Scolosis" Type="nvarchar(max)" />
+          <Property Name="Hospitalization" Type="nvarchar(max)" />
+          <Property Name="Operation" Type="nvarchar(max)" />
+          <Property Name="Cancer" Type="nvarchar(max)" />
+          <Property Name="CancerRelation" Type="nvarchar(max)" />
+          <Property Name="HeartProblem" Type="nvarchar(max)" />
+          <Property Name="HeartRelationProblem" Type="nvarchar(max)" />
+          <Property Name="HighBlood" Type="nvarchar(max)" />
+          <Property Name="HighBloodRelation" Type="nvarchar(max)" />
+          <Property Name="FamilyDiabetes" Type="nvarchar(max)" />
+          <Property Name="DiabetesRelation" Type="nvarchar(max)" />
+          <Property Name="KidneyProblem" Type="nvarchar(max)" />
+          <Property Name="KidneyProblemRelation" Type="nvarchar(max)" />
+          <Property Name="SeizureDisorder" Type="nvarchar(max)" />
+          <Property Name="SeizureDisorderRelation" Type="nvarchar(max)" />
+          <Property Name="Tubercolosis" Type="nvarchar(max)" />
+          <Property Name="TubercolosisRelation" Type="nvarchar(max)" />
+          <Property Name="FamilyAsthma" Type="nvarchar(max)" />
+          <Property Name="AsthmaRelation" Type="nvarchar(max)" />
+          <Property Name="BleedingDisorder" Type="nvarchar(max)" />
+          <Property Name="BleedingDisorderRelation" Type="nvarchar(max)" />
+          <Property Name="MentalDisorder" Type="nvarchar(max)" />
+          <Property Name="MentalDisorderRelation" Type="nvarchar(max)" />
+          <Property Name="Stroke" Type="nvarchar(max)" />
+          <Property Name="StrokeRelation" Type="nvarchar(max)" />
+          <Property Name="Obesity" Type="nvarchar(max)" />
+          <Property Name="ObesityRelation" Type="nvarchar(max)" />
+          <Property Name="Physical" Type="nvarchar(max)" />
+          <Property Name="PhysicalRelevantDetails" Type="nvarchar(max)" />
+          <Property Name="Sexual" Type="nvarchar(max)" />
+          <Property Name="SexualRelevantDetails" Type="nvarchar(max)" />
+          <Property Name="Verval" Type="nvarchar(max)" />
+          <Property Name="VervalRelevantDetails" Type="nvarchar(max)" />
+          <Property Name="AOOOGE" Type="nvarchar(max)" />
+          <Property Name="AOOOPH" Type="nvarchar(max)" />
+          <Property Name="Hernia" Type="nvarchar(max)" />
+          <Property Name="HerniaDate" Type="date" />
+          <Property Name="Circumcision" Type="nvarchar(max)" />
+          <Property Name="CircumcisionDate" Type="nvarchar(max)" />
+          <Property Name="AOOOM" Type="nvarchar(max)" />
+          <Property Name="RegularCycle" Type="nvarchar(max)" />
+          <Property Name="Flow" Type="nvarchar(max)" />
+          <Property Name="Discomfort" Type="nvarchar(max)" />
+          <Property Name="HeadA" Type="nvarchar" MaxLength="50" />
+          <Property Name="HeadB" Type="nvarchar" MaxLength="50" />
+          <Property Name="HeadC" Type="nvarchar" MaxLength="50" />
+          <Property Name="EyesA" Type="nvarchar" MaxLength="50" />
+          <Property Name="EyesB" Type="nvarchar" MaxLength="50" />
+          <Property Name="EyesC" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTA" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTB" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTC" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTD" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTE" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTF" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTG" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTH" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTI" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTJ" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTK" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTL" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTM" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTN" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTO" Type="nvarchar" MaxLength="50" />
+          <Property Name="NeckA" Type="nvarchar" MaxLength="50" />
+          <Property Name="NeckB" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLA" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLB" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLC" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLD" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLE" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLF" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLG" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLH" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLI" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLJ" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenA" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenB" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenC" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenD" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenE" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenF" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenG" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenH" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenI" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenJ" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenK" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenL" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointA" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointB" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointC" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointD" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointE" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointF" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointG" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointH" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointI" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointJ" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemA" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemB" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemC" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemD" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemE" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemF" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemG" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChronicDiseasesA" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChronicDiseasesB" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChronicDiseasesC" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChronicDiseasesD" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChronicDiseasesE" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChronicDiseasesF" Type="nvarchar(max)" />
+          <Property Name="InfectiousDiseasesA" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesB" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesC" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesD" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesE" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesF" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesG" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesH" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesI" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesJ" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesK" Type="nvarchar(max)" />
+          <Property Name="MedicineA" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineB" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineC" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineD" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineE" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineF" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineG" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineH" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineI" Type="nvarchar(max)" />
+          <Property Name="UnfavorableA" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnfavorableB" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnfavorableC" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnfavorableD" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnfavorableE" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnfavorableF" Type="nvarchar(max)" />
+          <Property Name="HeadAAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="HeadBAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="HeadCAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="EyesAAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="EyesBAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="EyesCAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTAAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTBAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTCAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTDAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTEAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTFAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTGAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTHAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTIAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTJAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTKAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTLAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTMAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTNAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTOAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="NeckAAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="NeckBAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLAAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLBAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLCAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLDAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLEAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLFAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLGAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLHAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLIAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLJAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenAAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenBAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenCAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenDAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenEAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenFAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenGAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenHAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenIAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenJAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenKAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenLAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointAAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointBAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointCAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointDAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointEAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointFAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointGAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointHAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointIAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointJAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemAAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemBAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemCAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemDAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemEAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemFAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemGAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChronicDiseasesAAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChronicDiseasesBAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChronicDiseasesCAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChronicDiseasesDAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChronicDiseasesEAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChronicDiseasesFAge" Type="nvarchar(max)" />
+          <Property Name="InfectiousDiseasesAAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesBAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesCAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesDAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesEAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesFAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesGAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesHAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesIAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesJAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesKAge" Type="nvarchar(max)" />
+          <Property Name="MedicineAAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineBAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineCAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineDAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineEAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineFAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineGAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineHAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineIAge" Type="nvarchar(max)" />
+          <Property Name="UnfavorableAAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnfavorableBAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnfavorableCAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnfavorableDAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnfavorableEAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnfavorableFAge" Type="nvarchar(max)" />
+          <Property Name="OMIOS1" Type="nvarchar(max)" />
+          <Property Name="OMIOS11" Type="nvarchar(max)" />
+          <Property Name="OMIOS12" Type="nvarchar(max)" />
+          <Property Name="OMIOS13" Type="nvarchar(max)" />
+          <Property Name="OMIOS2" Type="nvarchar(max)" />
+          <Property Name="OMIOSB22" Type="nvarchar(max)" />
+          <Property Name="OMIOS3" Type="nvarchar(max)" />
+          <Property Name="OMIOS33" Type="nvarchar(max)" />
+          <Property Name="OMIOS34" Type="nvarchar(max)" />
+          <Property Name="OMIOS35" Type="nvarchar(max)" />
+          <Property Name="OMIOS36" Type="nvarchar(max)" />
+          <Property Name="OMIOS4" Type="nvarchar(max)" />
+          <Property Name="OMIOS44" Type="nvarchar(max)" />
+          <Property Name="OMIOS5" Type="nvarchar(max)" />
+          <Property Name="OMIOS6" Type="nvarchar(max)" />
+          <Property Name="OMIOS66" Type="nvarchar(max)" />
+          <Property Name="ConcentName" Type="nvarchar(max)" />
+          <Property Name="ConsentRelationship" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="StudentHealthRecordTable">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar(max)" />
+          <Property Name="MiddleName" Type="nvarchar(max)" />
+          <Property Name="LastName" Type="nvarchar(max)" />
+          <Property Name="StudentNum" Type="nvarchar(max)" />
+          <Property Name="Sex" Type="nvarchar(max)" />
+          <Property Name="Birthdate" Type="date" />
+          <Property Name="Birthplace" Type="nvarchar(max)" />
+          <Property Name="Nationality" Type="nvarchar(max)" />
+          <Property Name="Religion" Type="nvarchar(max)" />
+          <Property Name="ContactNum" Type="nvarchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="FatherName" Type="nvarchar(max)" />
+          <Property Name="FatherOccupation" Type="nvarchar(max)" />
+          <Property Name="FatherContactNum" Type="nvarchar(max)" />
+          <Property Name="MotherName" Type="nvarchar(max)" />
+          <Property Name="MotherOccupation" Type="nvarchar(max)" />
+          <Property Name="MotherContactNum" Type="nvarchar(max)" />
+          <Property Name="GuardianName" Type="nvarchar(max)" />
+          <Property Name="GuardianOccupation" Type="nvarchar(max)" />
+          <Property Name="GuardianContactNum" Type="nvarchar(max)" />
+          <Property Name="HospitalofChoice" Type="nvarchar(max)" />
+          <Property Name="AddressofHospital" Type="nvarchar(max)" />
+          <Property Name="HospitalContactNum" Type="nvarchar(max)" />
+          <Property Name="NameofFamilyDoctor" Type="nvarchar(max)" />
+          <Property Name="Allergy" Type="nvarchar(max)" />
+          <Property Name="PastAsthma" Type="nvarchar(max)" />
+          <Property Name="Anemia" Type="nvarchar(max)" />
+          <Property Name="BleedingProblem" Type="nvarchar(max)" />
+          <Property Name="BehavioralProblem" Type="nvarchar(max)" />
+          <Property Name="HearingProblem" Type="nvarchar(max)" />
+          <Property Name="SpeechProblem" Type="nvarchar(max)" />
+          <Property Name="VisualProblem" Type="nvarchar(max)" />
+          <Property Name="RecurrentIndigestion" Type="nvarchar(max)" />
+          <Property Name="Jaundice" Type="nvarchar(max)" />
+          <Property Name="EatingDisorder" Type="nvarchar(max)" />
+          <Property Name="ChickenFox" Type="nvarchar(max)" />
+          <Property Name="DengueFever" Type="nvarchar(max)" />
+          <Property Name="ThypoidFever" Type="nvarchar(max)" />
+          <Property Name="Measles" Type="nvarchar(max)" />
+          <Property Name="Mumps" Type="nvarchar(max)" />
+          <Property Name="Pneumonia" Type="nvarchar(max)" />
+          <Property Name="PrimaryComplex" Type="nvarchar(max)" />
+          <Property Name="EarDischarge" Type="nvarchar(max)" />
+          <Property Name="Tonsilitis" Type="nvarchar(max)" />
+          <Property Name="Parasitism" Type="nvarchar(max)" />
+          <Property Name="Insomnias" Type="nvarchar(max)" />
+          <Property Name="HeartDisease" Type="nvarchar(max)" />
+          <Property Name="KidneyDisease" Type="nvarchar(max)" />
+          <Property Name="Convulsion" Type="nvarchar(max)" />
+          <Property Name="Epilepsy" Type="nvarchar(max)" />
+          <Property Name="PastDiabetes" Type="nvarchar(max)" />
+          <Property Name="Fainting" Type="nvarchar(max)" />
+          <Property Name="Fractures" Type="nvarchar(max)" />
+          <Property Name="Scolosis" Type="nvarchar(max)" />
+          <Property Name="Hospitalization" Type="nvarchar(max)" />
+          <Property Name="Operation" Type="nvarchar(max)" />
+          <Property Name="Cancer" Type="nvarchar(max)" />
+          <Property Name="CancerRelation" Type="nvarchar(max)" />
+          <Property Name="HeartProblem" Type="nvarchar(max)" />
+          <Property Name="HeartRelationProblem" Type="nvarchar(max)" />
+          <Property Name="HighBlood" Type="nvarchar(max)" />
+          <Property Name="HighBloodRelation" Type="nvarchar(max)" />
+          <Property Name="FamilyDiabetes" Type="nvarchar(max)" />
+          <Property Name="DiabetesRelation" Type="nvarchar(max)" />
+          <Property Name="KidneyProblem" Type="nvarchar(max)" />
+          <Property Name="KidneyProblemRelation" Type="nvarchar(max)" />
+          <Property Name="SeizureDisorder" Type="nvarchar(max)" />
+          <Property Name="SeizureDisorderRelation" Type="nvarchar(max)" />
+          <Property Name="Tubercolosis" Type="nvarchar(max)" />
+          <Property Name="TubercolosisRelation" Type="nvarchar(max)" />
+          <Property Name="FamilyAsthma" Type="nvarchar(max)" />
+          <Property Name="AsthmaRelation" Type="nvarchar(max)" />
+          <Property Name="BleedingDisorder" Type="nvarchar(max)" />
+          <Property Name="BleedingDisorderRelation" Type="nvarchar(max)" />
+          <Property Name="MentalDisorder" Type="nvarchar(max)" />
+          <Property Name="MentalDisorderRelation" Type="nvarchar(max)" />
+          <Property Name="Stroke" Type="nvarchar(max)" />
+          <Property Name="StrokeRelation" Type="nvarchar(max)" />
+          <Property Name="Obesity" Type="nvarchar(max)" />
+          <Property Name="ObesityRelation" Type="nvarchar(max)" />
+          <Property Name="Physical" Type="nvarchar(max)" />
+          <Property Name="PhysicalRelevantDetails" Type="nvarchar(max)" />
+          <Property Name="Sexual" Type="nvarchar(max)" />
+          <Property Name="SexualRelevantDetails" Type="nvarchar(max)" />
+          <Property Name="Verval" Type="nvarchar(max)" />
+          <Property Name="VervalRelevantDetails" Type="nvarchar(max)" />
+          <Property Name="AOOOGE" Type="nvarchar(max)" />
+          <Property Name="AOOOPH" Type="nvarchar(max)" />
+          <Property Name="Hernia" Type="nvarchar(max)" />
+          <Property Name="HerniaDate" Type="date" />
+          <Property Name="Circumcision" Type="nvarchar(max)" />
+          <Property Name="CircumcisionDate" Type="nvarchar(max)" />
+          <Property Name="AOOOM" Type="nvarchar(max)" />
+          <Property Name="RegularCycle" Type="nvarchar(max)" />
+          <Property Name="Flow" Type="nvarchar(max)" />
+          <Property Name="Discomfort" Type="nvarchar(max)" />
+          <Property Name="HeadA" Type="nvarchar" MaxLength="50" />
+          <Property Name="HeadB" Type="nvarchar" MaxLength="50" />
+          <Property Name="HeadC" Type="nvarchar" MaxLength="50" />
+          <Property Name="EyesA" Type="nvarchar" MaxLength="50" />
+          <Property Name="EyesB" Type="nvarchar" MaxLength="50" />
+          <Property Name="EyesC" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTA" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTB" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTC" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTD" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTE" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTF" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTG" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTH" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTI" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTJ" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTK" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTL" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTM" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTN" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTO" Type="nvarchar" MaxLength="50" />
+          <Property Name="NeckA" Type="nvarchar" MaxLength="50" />
+          <Property Name="NeckB" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLA" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLB" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLC" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLD" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLE" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLF" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLG" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLH" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLI" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLJ" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenA" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenB" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenC" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenD" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenE" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenF" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenG" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenH" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenI" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenJ" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenK" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenL" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointA" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointB" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointC" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointD" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointE" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointF" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointG" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointH" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointI" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointJ" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemA" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemB" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemC" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemD" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemE" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemF" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemG" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChronicDiseasesA" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChronicDiseasesB" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChronicDiseasesC" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChronicDiseasesD" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChronicDiseasesE" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChronicDiseasesF" Type="nvarchar(max)" />
+          <Property Name="InfectiousDiseasesA" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesB" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesC" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesD" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesE" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesF" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesG" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesH" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesI" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesJ" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesK" Type="nvarchar(max)" />
+          <Property Name="MedicineA" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineB" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineC" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineD" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineE" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineF" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineG" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineH" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineI" Type="nvarchar(max)" />
+          <Property Name="UnfavorableA" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnfavorableB" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnfavorableC" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnfavorableD" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnfavorableE" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnfavorableF" Type="nvarchar(max)" />
+          <Property Name="HeadAAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="HeadBAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="HeadCAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="EyesAAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="EyesBAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="EyesCAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTAAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTBAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTCAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTDAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTEAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTFAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTGAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTHAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTIAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTJAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTKAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTLAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTMAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTNAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ENTOAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="NeckAAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="NeckBAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLAAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLBAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLCAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLDAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLEAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLFAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLGAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLHAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLIAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="HLJAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenAAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenBAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenCAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenDAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenEAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenFAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenGAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenHAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenIAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenJAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenKAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="AbdomenLAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointAAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointBAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointCAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointDAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointEAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointFAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointGAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointHAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointIAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoneJointJAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemAAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemBAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemCAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemDAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemEAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemFAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="NervousSystemGAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChronicDiseasesAAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChronicDiseasesBAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChronicDiseasesCAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChronicDiseasesDAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChronicDiseasesEAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChronicDiseasesFAge" Type="nvarchar(max)" />
+          <Property Name="InfectiousDiseasesAAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesBAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesCAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesDAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesEAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesFAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesGAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesHAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesIAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesJAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="InfectiousDiseasesKAge" Type="nvarchar(max)" />
+          <Property Name="MedicineAAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineBAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineCAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineDAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineEAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineFAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineGAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineHAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="MedicineIAge" Type="nvarchar(max)" />
+          <Property Name="UnfavorableAAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnfavorableBAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnfavorableCAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnfavorableDAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnfavorableEAge" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnfavorableFAge" Type="nvarchar(max)" />
+          <Property Name="OMIOS1" Type="nvarchar(max)" />
+          <Property Name="OMIOS11" Type="nvarchar(max)" />
+          <Property Name="OMIOS12" Type="nvarchar(max)" />
+          <Property Name="OMIOS13" Type="nvarchar(max)" />
+          <Property Name="OMIOS2" Type="nvarchar(max)" />
+          <Property Name="OMIOSB22" Type="nvarchar(max)" />
+          <Property Name="OMIOS3" Type="nvarchar(max)" />
+          <Property Name="OMIOS33" Type="nvarchar(max)" />
+          <Property Name="OMIOS34" Type="nvarchar(max)" />
+          <Property Name="OMIOS35" Type="nvarchar(max)" />
+          <Property Name="OMIOS36" Type="nvarchar(max)" />
+          <Property Name="OMIOS4" Type="nvarchar(max)" />
+          <Property Name="OMIOS44" Type="nvarchar(max)" />
+          <Property Name="OMIOS5" Type="nvarchar(max)" />
+          <Property Name="OMIOS6" Type="nvarchar(max)" />
+          <Property Name="OMIOS66" Type="nvarchar(max)" />
+          <Property Name="ConcentName" Type="nvarchar(max)" />
+          <Property Name="ConsentRelationship" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="StudentHealthRecordDBModelStoreContainer">
+          <EntitySet Name="APIPendingTable" EntityType="Self.APIPendingTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PublicHealthRecordTable" EntityType="Self.PublicHealthRecordTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StudentHealthRecordTable" EntityType="Self.StudentHealthRecordTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="StudentHealthRecordDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="StudentHealthRecordDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="APIPendingTables" EntityType="StudentHealthRecordDBModel.APIPendingTable" />
+          <EntitySet Name="users" EntityType="StudentHealthRecordDBModel.user" />
+          <EntitySet Name="StudentHealthRecordTables" EntityType="StudentHealthRecordDBModel.StudentHealthRecordTable" />
+          <EntitySet Name="PublicHealthRecordTables" EntityType="StudentHealthRecordDBModel.PublicHealthRecordTable" />
+        </EntityContainer>
+        <EntityType Name="APIPendingTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Firstname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Lastname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Middlename" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="StudentHealthRecordTable">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MiddleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StudentNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Sex" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Birthdate" Type="DateTime" Precision="0" />
+          <Property Name="Birthplace" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Nationality" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Religion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ContactNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FatherName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FatherOccupation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FatherContactNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MotherName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MotherOccupation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MotherContactNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GuardianName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GuardianOccupation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GuardianContactNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HospitalofChoice" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AddressofHospital" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HospitalContactNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NameofFamilyDoctor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Allergy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PastAsthma" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Anemia" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BleedingProblem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BehavioralProblem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HearingProblem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SpeechProblem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VisualProblem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RecurrentIndigestion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Jaundice" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EatingDisorder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ChickenFox" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DengueFever" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ThypoidFever" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Measles" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mumps" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Pneumonia" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PrimaryComplex" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EarDischarge" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Tonsilitis" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Parasitism" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Insomnias" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HeartDisease" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KidneyDisease" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Convulsion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Epilepsy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PastDiabetes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Fainting" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Fractures" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Scolosis" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hospitalization" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Operation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Cancer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CancerRelation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HeartProblem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HeartRelationProblem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HighBlood" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HighBloodRelation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FamilyDiabetes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DiabetesRelation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KidneyProblem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KidneyProblemRelation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SeizureDisorder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SeizureDisorderRelation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Tubercolosis" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TubercolosisRelation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FamilyAsthma" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AsthmaRelation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BleedingDisorder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BleedingDisorderRelation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MentalDisorder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MentalDisorderRelation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Stroke" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StrokeRelation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Obesity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ObesityRelation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Physical" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhysicalRelevantDetails" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Sexual" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SexualRelevantDetails" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Verval" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VervalRelevantDetails" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AOOOGE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AOOOPH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hernia" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HerniaDate" Type="DateTime" Precision="0" />
+          <Property Name="Circumcision" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CircumcisionDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AOOOM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RegularCycle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Flow" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Discomfort" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HeadA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HeadB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HeadC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EyesA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EyesB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EyesC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTJ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NeckA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NeckB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLJ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenJ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointJ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChronicDiseasesA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChronicDiseasesB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChronicDiseasesC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChronicDiseasesD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChronicDiseasesE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChronicDiseasesF" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesJ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UnfavorableA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UnfavorableB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UnfavorableC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UnfavorableD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UnfavorableE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UnfavorableF" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HeadAAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HeadBAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HeadCAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EyesAAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EyesBAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EyesCAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTAAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTBAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTCAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTDAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTEAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTFAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTGAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTHAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTIAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTJAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTKAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTLAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTMAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTNAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTOAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NeckAAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NeckBAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLAAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLBAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLCAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLDAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLEAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLFAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLGAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLHAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLIAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLJAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenAAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenBAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenCAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenDAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenEAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenFAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenGAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenHAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenIAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenJAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenKAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenLAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointAAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointBAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointCAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointDAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointEAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointFAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointGAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointHAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointIAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointJAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemAAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemBAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemCAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemDAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemEAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemFAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemGAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChronicDiseasesAAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChronicDiseasesBAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChronicDiseasesCAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChronicDiseasesDAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChronicDiseasesEAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChronicDiseasesFAge" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesAAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesBAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesCAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesDAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesEAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesFAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesGAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesHAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesIAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesJAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesKAge" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineAAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineBAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineCAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineDAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineEAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineFAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineGAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineHAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineIAge" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UnfavorableAAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UnfavorableBAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UnfavorableCAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UnfavorableDAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UnfavorableEAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UnfavorableFAge" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS11" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS12" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS13" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOSB22" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS33" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS34" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS35" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS36" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS44" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS66" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ConcentName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ConsentRelationship" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PublicHealthRecordTable">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MiddleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StudentNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Sex" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Birthdate" Type="DateTime" Precision="0" />
+          <Property Name="Birthplace" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Nationality" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Religion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ContactNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FatherName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FatherOccupation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FatherContactNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MotherName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MotherOccupation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MotherContactNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GuardianName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GuardianOccupation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GuardianContactNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HospitalofChoice" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AddressofHospital" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HospitalContactNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NameofFamilyDoctor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Allergy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PastAsthma" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Anemia" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BleedingProblem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BehavioralProblem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HearingProblem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SpeechProblem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VisualProblem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RecurrentIndigestion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Jaundice" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EatingDisorder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ChickenFox" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DengueFever" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ThypoidFever" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Measles" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mumps" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Pneumonia" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PrimaryComplex" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EarDischarge" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Tonsilitis" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Parasitism" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Insomnias" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HeartDisease" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KidneyDisease" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Convulsion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Epilepsy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PastDiabetes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Fainting" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Fractures" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Scolosis" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hospitalization" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Operation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Cancer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CancerRelation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HeartProblem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HeartRelationProblem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HighBlood" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HighBloodRelation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FamilyDiabetes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DiabetesRelation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KidneyProblem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KidneyProblemRelation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SeizureDisorder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SeizureDisorderRelation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Tubercolosis" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TubercolosisRelation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FamilyAsthma" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AsthmaRelation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BleedingDisorder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BleedingDisorderRelation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MentalDisorder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MentalDisorderRelation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Stroke" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StrokeRelation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Obesity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ObesityRelation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Physical" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhysicalRelevantDetails" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Sexual" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SexualRelevantDetails" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Verval" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VervalRelevantDetails" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AOOOGE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AOOOPH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hernia" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HerniaDate" Type="DateTime" Precision="0" />
+          <Property Name="Circumcision" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CircumcisionDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AOOOM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RegularCycle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Flow" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Discomfort" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HeadA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HeadB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HeadC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EyesA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EyesB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EyesC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTJ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NeckA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NeckB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLJ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenJ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointJ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChronicDiseasesA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChronicDiseasesB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChronicDiseasesC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChronicDiseasesD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChronicDiseasesE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChronicDiseasesF" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesJ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UnfavorableA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UnfavorableB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UnfavorableC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UnfavorableD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UnfavorableE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UnfavorableF" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HeadAAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HeadBAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HeadCAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EyesAAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EyesBAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EyesCAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTAAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTBAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTCAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTDAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTEAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTFAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTGAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTHAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTIAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTJAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTKAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTLAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTMAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTNAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ENTOAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NeckAAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NeckBAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLAAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLBAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLCAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLDAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLEAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLFAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLGAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLHAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLIAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HLJAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenAAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenBAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenCAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenDAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenEAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenFAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenGAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenHAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenIAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenJAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenKAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AbdomenLAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointAAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointBAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointCAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointDAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointEAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointFAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointGAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointHAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointIAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoneJointJAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemAAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemBAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemCAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemDAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemEAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemFAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NervousSystemGAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChronicDiseasesAAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChronicDiseasesBAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChronicDiseasesCAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChronicDiseasesDAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChronicDiseasesEAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChronicDiseasesFAge" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesAAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesBAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesCAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesDAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesEAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesFAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesGAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesHAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesIAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesJAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InfectiousDiseasesKAge" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineAAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineBAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineCAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineDAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineEAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineFAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineGAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineHAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MedicineIAge" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UnfavorableAAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UnfavorableBAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UnfavorableCAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UnfavorableDAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UnfavorableEAge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UnfavorableFAge" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS11" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS12" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS13" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOSB22" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS33" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS34" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS35" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS36" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS44" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMIOS66" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ConcentName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ConsentRelationship" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="StudentHealthRecordDBModelStoreContainer" CdmEntityContainer="StudentHealthRecordDBEntities">
+          <EntitySetMapping Name="APIPendingTables">
+            <EntityTypeMapping TypeName="StudentHealthRecordDBModel.APIPendingTable">
+              <MappingFragment StoreEntitySet="APIPendingTable">
+                <ScalarProperty Name="Middlename" ColumnName="Middlename" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+                <ScalarProperty Name="StudentNum" ColumnName="StudentNum" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="StudentHealthRecordDBModel.user">
+              <MappingFragment StoreEntitySet="user">
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudentHealthRecordTables">
+            <EntityTypeMapping TypeName="StudentHealthRecordDBModel.StudentHealthRecordTable">
+              <MappingFragment StoreEntitySet="StudentHealthRecordTable">
+                <ScalarProperty Name="ConsentRelationship" ColumnName="ConsentRelationship" />
+                <ScalarProperty Name="ConcentName" ColumnName="ConcentName" />
+                <ScalarProperty Name="OMIOS66" ColumnName="OMIOS66" />
+                <ScalarProperty Name="OMIOS6" ColumnName="OMIOS6" />
+                <ScalarProperty Name="OMIOS5" ColumnName="OMIOS5" />
+                <ScalarProperty Name="OMIOS44" ColumnName="OMIOS44" />
+                <ScalarProperty Name="OMIOS4" ColumnName="OMIOS4" />
+                <ScalarProperty Name="OMIOS36" ColumnName="OMIOS36" />
+                <ScalarProperty Name="OMIOS35" ColumnName="OMIOS35" />
+                <ScalarProperty Name="OMIOS34" ColumnName="OMIOS34" />
+                <ScalarProperty Name="OMIOS33" ColumnName="OMIOS33" />
+                <ScalarProperty Name="OMIOS3" ColumnName="OMIOS3" />
+                <ScalarProperty Name="OMIOSB22" ColumnName="OMIOSB22" />
+                <ScalarProperty Name="OMIOS2" ColumnName="OMIOS2" />
+                <ScalarProperty Name="OMIOS13" ColumnName="OMIOS13" />
+                <ScalarProperty Name="OMIOS12" ColumnName="OMIOS12" />
+                <ScalarProperty Name="OMIOS11" ColumnName="OMIOS11" />
+                <ScalarProperty Name="OMIOS1" ColumnName="OMIOS1" />
+                <ScalarProperty Name="UnfavorableFAge" ColumnName="UnfavorableFAge" />
+                <ScalarProperty Name="UnfavorableEAge" ColumnName="UnfavorableEAge" />
+                <ScalarProperty Name="UnfavorableDAge" ColumnName="UnfavorableDAge" />
+                <ScalarProperty Name="UnfavorableCAge" ColumnName="UnfavorableCAge" />
+                <ScalarProperty Name="UnfavorableBAge" ColumnName="UnfavorableBAge" />
+                <ScalarProperty Name="UnfavorableAAge" ColumnName="UnfavorableAAge" />
+                <ScalarProperty Name="MedicineIAge" ColumnName="MedicineIAge" />
+                <ScalarProperty Name="MedicineHAge" ColumnName="MedicineHAge" />
+                <ScalarProperty Name="MedicineGAge" ColumnName="MedicineGAge" />
+                <ScalarProperty Name="MedicineFAge" ColumnName="MedicineFAge" />
+                <ScalarProperty Name="MedicineEAge" ColumnName="MedicineEAge" />
+                <ScalarProperty Name="MedicineDAge" ColumnName="MedicineDAge" />
+                <ScalarProperty Name="MedicineCAge" ColumnName="MedicineCAge" />
+                <ScalarProperty Name="MedicineBAge" ColumnName="MedicineBAge" />
+                <ScalarProperty Name="MedicineAAge" ColumnName="MedicineAAge" />
+                <ScalarProperty Name="InfectiousDiseasesKAge" ColumnName="InfectiousDiseasesKAge" />
+                <ScalarProperty Name="InfectiousDiseasesJAge" ColumnName="InfectiousDiseasesJAge" />
+                <ScalarProperty Name="InfectiousDiseasesIAge" ColumnName="InfectiousDiseasesIAge" />
+                <ScalarProperty Name="InfectiousDiseasesHAge" ColumnName="InfectiousDiseasesHAge" />
+                <ScalarProperty Name="InfectiousDiseasesGAge" ColumnName="InfectiousDiseasesGAge" />
+                <ScalarProperty Name="InfectiousDiseasesFAge" ColumnName="InfectiousDiseasesFAge" />
+                <ScalarProperty Name="InfectiousDiseasesEAge" ColumnName="InfectiousDiseasesEAge" />
+                <ScalarProperty Name="InfectiousDiseasesDAge" ColumnName="InfectiousDiseasesDAge" />
+                <ScalarProperty Name="InfectiousDiseasesCAge" ColumnName="InfectiousDiseasesCAge" />
+                <ScalarProperty Name="InfectiousDiseasesBAge" ColumnName="InfectiousDiseasesBAge" />
+                <ScalarProperty Name="InfectiousDiseasesAAge" ColumnName="InfectiousDiseasesAAge" />
+                <ScalarProperty Name="ChronicDiseasesFAge" ColumnName="ChronicDiseasesFAge" />
+                <ScalarProperty Name="ChronicDiseasesEAge" ColumnName="ChronicDiseasesEAge" />
+                <ScalarProperty Name="ChronicDiseasesDAge" ColumnName="ChronicDiseasesDAge" />
+                <ScalarProperty Name="ChronicDiseasesCAge" ColumnName="ChronicDiseasesCAge" />
+                <ScalarProperty Name="ChronicDiseasesBAge" ColumnName="ChronicDiseasesBAge" />
+                <ScalarProperty Name="ChronicDiseasesAAge" ColumnName="ChronicDiseasesAAge" />
+                <ScalarProperty Name="NervousSystemGAge" ColumnName="NervousSystemGAge" />
+                <ScalarProperty Name="NervousSystemFAge" ColumnName="NervousSystemFAge" />
+                <ScalarProperty Name="NervousSystemEAge" ColumnName="NervousSystemEAge" />
+                <ScalarProperty Name="NervousSystemDAge" ColumnName="NervousSystemDAge" />
+                <ScalarProperty Name="NervousSystemCAge" ColumnName="NervousSystemCAge" />
+                <ScalarProperty Name="NervousSystemBAge" ColumnName="NervousSystemBAge" />
+                <ScalarProperty Name="NervousSystemAAge" ColumnName="NervousSystemAAge" />
+                <ScalarProperty Name="BoneJointJAge" ColumnName="BoneJointJAge" />
+                <ScalarProperty Name="BoneJointIAge" ColumnName="BoneJointIAge" />
+                <ScalarProperty Name="BoneJointHAge" ColumnName="BoneJointHAge" />
+                <ScalarProperty Name="BoneJointGAge" ColumnName="BoneJointGAge" />
+                <ScalarProperty Name="BoneJointFAge" ColumnName="BoneJointFAge" />
+                <ScalarProperty Name="BoneJointEAge" ColumnName="BoneJointEAge" />
+                <ScalarProperty Name="BoneJointDAge" ColumnName="BoneJointDAge" />
+                <ScalarProperty Name="BoneJointCAge" ColumnName="BoneJointCAge" />
+                <ScalarProperty Name="BoneJointBAge" ColumnName="BoneJointBAge" />
+                <ScalarProperty Name="BoneJointAAge" ColumnName="BoneJointAAge" />
+                <ScalarProperty Name="AbdomenLAge" ColumnName="AbdomenLAge" />
+                <ScalarProperty Name="AbdomenKAge" ColumnName="AbdomenKAge" />
+                <ScalarProperty Name="AbdomenJAge" ColumnName="AbdomenJAge" />
+                <ScalarProperty Name="AbdomenIAge" ColumnName="AbdomenIAge" />
+                <ScalarProperty Name="AbdomenHAge" ColumnName="AbdomenHAge" />
+                <ScalarProperty Name="AbdomenGAge" ColumnName="AbdomenGAge" />
+                <ScalarProperty Name="AbdomenFAge" ColumnName="AbdomenFAge" />
+                <ScalarProperty Name="AbdomenEAge" ColumnName="AbdomenEAge" />
+                <ScalarProperty Name="AbdomenDAge" ColumnName="AbdomenDAge" />
+                <ScalarProperty Name="AbdomenCAge" ColumnName="AbdomenCAge" />
+                <ScalarProperty Name="AbdomenBAge" ColumnName="AbdomenBAge" />
+                <ScalarProperty Name="AbdomenAAge" ColumnName="AbdomenAAge" />
+                <ScalarProperty Name="HLJAge" ColumnName="HLJAge" />
+                <ScalarProperty Name="HLIAge" ColumnName="HLIAge" />
+                <ScalarProperty Name="HLHAge" ColumnName="HLHAge" />
+                <ScalarProperty Name="HLGAge" ColumnName="HLGAge" />
+                <ScalarProperty Name="HLFAge" ColumnName="HLFAge" />
+                <ScalarProperty Name="HLEAge" ColumnName="HLEAge" />
+                <ScalarProperty Name="HLDAge" ColumnName="HLDAge" />
+                <ScalarProperty Name="HLCAge" ColumnName="HLCAge" />
+                <ScalarProperty Name="HLBAge" ColumnName="HLBAge" />
+                <ScalarProperty Name="HLAAge" ColumnName="HLAAge" />
+                <ScalarProperty Name="NeckBAge" ColumnName="NeckBAge" />
+                <ScalarProperty Name="NeckAAge" ColumnName="NeckAAge" />
+                <ScalarProperty Name="ENTOAge" ColumnName="ENTOAge" />
+                <ScalarProperty Name="ENTNAge" ColumnName="ENTNAge" />
+                <ScalarProperty Name="ENTMAge" ColumnName="ENTMAge" />
+                <ScalarProperty Name="ENTLAge" ColumnName="ENTLAge" />
+                <ScalarProperty Name="ENTKAge" ColumnName="ENTKAge" />
+                <ScalarProperty Name="ENTJAge" ColumnName="ENTJAge" />
+                <ScalarProperty Name="ENTIAge" ColumnName="ENTIAge" />
+                <ScalarProperty Name="ENTHAge" ColumnName="ENTHAge" />
+                <ScalarProperty Name="ENTGAge" ColumnName="ENTGAge" />
+                <ScalarProperty Name="ENTFAge" ColumnName="ENTFAge" />
+                <ScalarProperty Name="ENTEAge" ColumnName="ENTEAge" />
+                <ScalarProperty Name="ENTDAge" ColumnName="ENTDAge" />
+                <ScalarProperty Name="ENTCAge" ColumnName="ENTCAge" />
+                <ScalarProperty Name="ENTBAge" ColumnName="ENTBAge" />
+                <ScalarProperty Name="ENTAAge" ColumnName="ENTAAge" />
+                <ScalarProperty Name="EyesCAge" ColumnName="EyesCAge" />
+                <ScalarProperty Name="EyesBAge" ColumnName="EyesBAge" />
+                <ScalarProperty Name="EyesAAge" ColumnName="EyesAAge" />
+                <ScalarProperty Name="HeadCAge" ColumnName="HeadCAge" />
+                <ScalarProperty Name="HeadBAge" ColumnName="HeadBAge" />
+                <ScalarProperty Name="HeadAAge" ColumnName="HeadAAge" />
+                <ScalarProperty Name="UnfavorableF" ColumnName="UnfavorableF" />
+                <ScalarProperty Name="UnfavorableE" ColumnName="UnfavorableE" />
+                <ScalarProperty Name="UnfavorableD" ColumnName="UnfavorableD" />
+                <ScalarProperty Name="UnfavorableC" ColumnName="UnfavorableC" />
+                <ScalarProperty Name="UnfavorableB" ColumnName="UnfavorableB" />
+                <ScalarProperty Name="UnfavorableA" ColumnName="UnfavorableA" />
+                <ScalarProperty Name="MedicineI" ColumnName="MedicineI" />
+                <ScalarProperty Name="MedicineH" ColumnName="MedicineH" />
+                <ScalarProperty Name="MedicineG" ColumnName="MedicineG" />
+                <ScalarProperty Name="MedicineF" ColumnName="MedicineF" />
+                <ScalarProperty Name="MedicineE" ColumnName="MedicineE" />
+                <ScalarProperty Name="MedicineD" ColumnName="MedicineD" />
+                <ScalarProperty Name="MedicineC" ColumnName="MedicineC" />
+                <ScalarProperty Name="MedicineB" ColumnName="MedicineB" />
+                <ScalarProperty Name="MedicineA" ColumnName="MedicineA" />
+                <ScalarProperty Name="InfectiousDiseasesK" ColumnName="InfectiousDiseasesK" />
+                <ScalarProperty Name="InfectiousDiseasesJ" ColumnName="InfectiousDiseasesJ" />
+                <ScalarProperty Name="InfectiousDiseasesI" ColumnName="InfectiousDiseasesI" />
+                <ScalarProperty Name="InfectiousDiseasesH" ColumnName="InfectiousDiseasesH" />
+                <ScalarProperty Name="InfectiousDiseasesG" ColumnName="InfectiousDiseasesG" />
+                <ScalarProperty Name="InfectiousDiseasesF" ColumnName="InfectiousDiseasesF" />
+                <ScalarProperty Name="InfectiousDiseasesE" ColumnName="InfectiousDiseasesE" />
+                <ScalarProperty Name="InfectiousDiseasesD" ColumnName="InfectiousDiseasesD" />
+                <ScalarProperty Name="InfectiousDiseasesC" ColumnName="InfectiousDiseasesC" />
+                <ScalarProperty Name="InfectiousDiseasesB" ColumnName="InfectiousDiseasesB" />
+                <ScalarProperty Name="InfectiousDiseasesA" ColumnName="InfectiousDiseasesA" />
+                <ScalarProperty Name="ChronicDiseasesF" ColumnName="ChronicDiseasesF" />
+                <ScalarProperty Name="ChronicDiseasesE" ColumnName="ChronicDiseasesE" />
+                <ScalarProperty Name="ChronicDiseasesD" ColumnName="ChronicDiseasesD" />
+                <ScalarProperty Name="ChronicDiseasesC" ColumnName="ChronicDiseasesC" />
+                <ScalarProperty Name="ChronicDiseasesB" ColumnName="ChronicDiseasesB" />
+                <ScalarProperty Name="ChronicDiseasesA" ColumnName="ChronicDiseasesA" />
+                <ScalarProperty Name="NervousSystemG" ColumnName="NervousSystemG" />
+                <ScalarProperty Name="NervousSystemF" ColumnName="NervousSystemF" />
+                <ScalarProperty Name="NervousSystemE" ColumnName="NervousSystemE" />
+                <ScalarProperty Name="NervousSystemD" ColumnName="NervousSystemD" />
+                <ScalarProperty Name="NervousSystemC" ColumnName="NervousSystemC" />
+                <ScalarProperty Name="NervousSystemB" ColumnName="NervousSystemB" />
+                <ScalarProperty Name="NervousSystemA" ColumnName="NervousSystemA" />
+                <ScalarProperty Name="BoneJointJ" ColumnName="BoneJointJ" />
+                <ScalarProperty Name="BoneJointI" ColumnName="BoneJointI" />
+                <ScalarProperty Name="BoneJointH" ColumnName="BoneJointH" />
+                <ScalarProperty Name="BoneJointG" ColumnName="BoneJointG" />
+                <ScalarProperty Name="BoneJointF" ColumnName="BoneJointF" />
+                <ScalarProperty Name="BoneJointE" ColumnName="BoneJointE" />
+                <ScalarProperty Name="BoneJointD" ColumnName="BoneJointD" />
+                <ScalarProperty Name="BoneJointC" ColumnName="BoneJointC" />
+                <ScalarProperty Name="BoneJointB" ColumnName="BoneJointB" />
+                <ScalarProperty Name="BoneJointA" ColumnName="BoneJointA" />
+                <ScalarProperty Name="AbdomenL" ColumnName="AbdomenL" />
+                <ScalarProperty Name="AbdomenK" ColumnName="AbdomenK" />
+                <ScalarProperty Name="AbdomenJ" ColumnName="AbdomenJ" />
+                <ScalarProperty Name="AbdomenI" ColumnName="AbdomenI" />
+                <ScalarProperty Name="AbdomenH" ColumnName="AbdomenH" />
+                <ScalarProperty Name="AbdomenG" ColumnName="AbdomenG" />
+                <ScalarProperty Name="AbdomenF" ColumnName="AbdomenF" />
+                <ScalarProperty Name="AbdomenE" ColumnName="AbdomenE" />
+                <ScalarProperty Name="AbdomenD" ColumnName="AbdomenD" />
+                <ScalarProperty Name="AbdomenC" ColumnName="AbdomenC" />
+                <ScalarProperty Name="AbdomenB" ColumnName="AbdomenB" />
+                <ScalarProperty Name="AbdomenA" ColumnName="AbdomenA" />
+                <ScalarProperty Name="HLJ" ColumnName="HLJ" />
+                <ScalarProperty Name="HLI" ColumnName="HLI" />
+                <ScalarProperty Name="HLH" ColumnName="HLH" />
+                <ScalarProperty Name="HLG" ColumnName="HLG" />
+                <ScalarProperty Name="HLF" ColumnName="HLF" />
+                <ScalarProperty Name="HLE" ColumnName="HLE" />
+                <ScalarProperty Name="HLD" ColumnName="HLD" />
+                <ScalarProperty Name="HLC" ColumnName="HLC" />
+                <ScalarProperty Name="HLB" ColumnName="HLB" />
+                <ScalarProperty Name="HLA" ColumnName="HLA" />
+                <ScalarProperty Name="NeckB" ColumnName="NeckB" />
+                <ScalarProperty Name="NeckA" ColumnName="NeckA" />
+                <ScalarProperty Name="ENTO" ColumnName="ENTO" />
+                <ScalarProperty Name="ENTN" ColumnName="ENTN" />
+                <ScalarProperty Name="ENTM" ColumnName="ENTM" />
+                <ScalarProperty Name="ENTL" ColumnName="ENTL" />
+                <ScalarProperty Name="ENTK" ColumnName="ENTK" />
+                <ScalarProperty Name="ENTJ" ColumnName="ENTJ" />
+                <ScalarProperty Name="ENTI" ColumnName="ENTI" />
+                <ScalarProperty Name="ENTH" ColumnName="ENTH" />
+                <ScalarProperty Name="ENTG" ColumnName="ENTG" />
+                <ScalarProperty Name="ENTF" ColumnName="ENTF" />
+                <ScalarProperty Name="ENTE" ColumnName="ENTE" />
+                <ScalarProperty Name="ENTD" ColumnName="ENTD" />
+                <ScalarProperty Name="ENTC" ColumnName="ENTC" />
+                <ScalarProperty Name="ENTB" ColumnName="ENTB" />
+                <ScalarProperty Name="ENTA" ColumnName="ENTA" />
+                <ScalarProperty Name="EyesC" ColumnName="EyesC" />
+                <ScalarProperty Name="EyesB" ColumnName="EyesB" />
+                <ScalarProperty Name="EyesA" ColumnName="EyesA" />
+                <ScalarProperty Name="HeadC" ColumnName="HeadC" />
+                <ScalarProperty Name="HeadB" ColumnName="HeadB" />
+                <ScalarProperty Name="HeadA" ColumnName="HeadA" />
+                <ScalarProperty Name="Discomfort" ColumnName="Discomfort" />
+                <ScalarProperty Name="Flow" ColumnName="Flow" />
+                <ScalarProperty Name="RegularCycle" ColumnName="RegularCycle" />
+                <ScalarProperty Name="AOOOM" ColumnName="AOOOM" />
+                <ScalarProperty Name="CircumcisionDate" ColumnName="CircumcisionDate" />
+                <ScalarProperty Name="Circumcision" ColumnName="Circumcision" />
+                <ScalarProperty Name="HerniaDate" ColumnName="HerniaDate" />
+                <ScalarProperty Name="Hernia" ColumnName="Hernia" />
+                <ScalarProperty Name="AOOOPH" ColumnName="AOOOPH" />
+                <ScalarProperty Name="AOOOGE" ColumnName="AOOOGE" />
+                <ScalarProperty Name="VervalRelevantDetails" ColumnName="VervalRelevantDetails" />
+                <ScalarProperty Name="Verval" ColumnName="Verval" />
+                <ScalarProperty Name="SexualRelevantDetails" ColumnName="SexualRelevantDetails" />
+                <ScalarProperty Name="Sexual" ColumnName="Sexual" />
+                <ScalarProperty Name="PhysicalRelevantDetails" ColumnName="PhysicalRelevantDetails" />
+                <ScalarProperty Name="Physical" ColumnName="Physical" />
+                <ScalarProperty Name="ObesityRelation" ColumnName="ObesityRelation" />
+                <ScalarProperty Name="Obesity" ColumnName="Obesity" />
+                <ScalarProperty Name="StrokeRelation" ColumnName="StrokeRelation" />
+                <ScalarProperty Name="Stroke" ColumnName="Stroke" />
+                <ScalarProperty Name="MentalDisorderRelation" ColumnName="MentalDisorderRelation" />
+                <ScalarProperty Name="MentalDisorder" ColumnName="MentalDisorder" />
+                <ScalarProperty Name="BleedingDisorderRelation" ColumnName="BleedingDisorderRelation" />
+                <ScalarProperty Name="BleedingDisorder" ColumnName="BleedingDisorder" />
+                <ScalarProperty Name="AsthmaRelation" ColumnName="AsthmaRelation" />
+                <ScalarProperty Name="FamilyAsthma" ColumnName="FamilyAsthma" />
+                <ScalarProperty Name="TubercolosisRelation" ColumnName="TubercolosisRelation" />
+                <ScalarProperty Name="Tubercolosis" ColumnName="Tubercolosis" />
+                <ScalarProperty Name="SeizureDisorderRelation" ColumnName="SeizureDisorderRelation" />
+                <ScalarProperty Name="SeizureDisorder" ColumnName="SeizureDisorder" />
+                <ScalarProperty Name="KidneyProblemRelation" ColumnName="KidneyProblemRelation" />
+                <ScalarProperty Name="KidneyProblem" ColumnName="KidneyProblem" />
+                <ScalarProperty Name="DiabetesRelation" ColumnName="DiabetesRelation" />
+                <ScalarProperty Name="FamilyDiabetes" ColumnName="FamilyDiabetes" />
+                <ScalarProperty Name="HighBloodRelation" ColumnName="HighBloodRelation" />
+                <ScalarProperty Name="HighBlood" ColumnName="HighBlood" />
+                <ScalarProperty Name="HeartRelationProblem" ColumnName="HeartRelationProblem" />
+                <ScalarProperty Name="HeartProblem" ColumnName="HeartProblem" />
+                <ScalarProperty Name="CancerRelation" ColumnName="CancerRelation" />
+                <ScalarProperty Name="Cancer" ColumnName="Cancer" />
+                <ScalarProperty Name="Operation" ColumnName="Operation" />
+                <ScalarProperty Name="Hospitalization" ColumnName="Hospitalization" />
+                <ScalarProperty Name="Scolosis" ColumnName="Scolosis" />
+                <ScalarProperty Name="Fractures" ColumnName="Fractures" />
+                <ScalarProperty Name="Fainting" ColumnName="Fainting" />
+                <ScalarProperty Name="PastDiabetes" ColumnName="PastDiabetes" />
+                <ScalarProperty Name="Epilepsy" ColumnName="Epilepsy" />
+                <ScalarProperty Name="Convulsion" ColumnName="Convulsion" />
+                <ScalarProperty Name="KidneyDisease" ColumnName="KidneyDisease" />
+                <ScalarProperty Name="HeartDisease" ColumnName="HeartDisease" />
+                <ScalarProperty Name="Insomnias" ColumnName="Insomnias" />
+                <ScalarProperty Name="Parasitism" ColumnName="Parasitism" />
+                <ScalarProperty Name="Tonsilitis" ColumnName="Tonsilitis" />
+                <ScalarProperty Name="EarDischarge" ColumnName="EarDischarge" />
+                <ScalarProperty Name="PrimaryComplex" ColumnName="PrimaryComplex" />
+                <ScalarProperty Name="Pneumonia" ColumnName="Pneumonia" />
+                <ScalarProperty Name="Mumps" ColumnName="Mumps" />
+                <ScalarProperty Name="Measles" ColumnName="Measles" />
+                <ScalarProperty Name="ThypoidFever" ColumnName="ThypoidFever" />
+                <ScalarProperty Name="DengueFever" ColumnName="DengueFever" />
+                <ScalarProperty Name="ChickenFox" ColumnName="ChickenFox" />
+                <ScalarProperty Name="EatingDisorder" ColumnName="EatingDisorder" />
+                <ScalarProperty Name="Jaundice" ColumnName="Jaundice" />
+                <ScalarProperty Name="RecurrentIndigestion" ColumnName="RecurrentIndigestion" />
+                <ScalarProperty Name="VisualProblem" ColumnName="VisualProblem" />
+                <ScalarProperty Name="SpeechProblem" ColumnName="SpeechProblem" />
+                <ScalarProperty Name="HearingProblem" ColumnName="HearingProblem" />
+                <ScalarProperty Name="BehavioralProblem" ColumnName="BehavioralProblem" />
+                <ScalarProperty Name="BleedingProblem" ColumnName="BleedingProblem" />
+                <ScalarProperty Name="Anemia" ColumnName="Anemia" />
+                <ScalarProperty Name="PastAsthma" ColumnName="PastAsthma" />
+                <ScalarProperty Name="Allergy" ColumnName="Allergy" />
+                <ScalarProperty Name="NameofFamilyDoctor" ColumnName="NameofFamilyDoctor" />
+                <ScalarProperty Name="HospitalContactNum" ColumnName="HospitalContactNum" />
+                <ScalarProperty Name="AddressofHospital" ColumnName="AddressofHospital" />
+                <ScalarProperty Name="HospitalofChoice" ColumnName="HospitalofChoice" />
+                <ScalarProperty Name="GuardianContactNum" ColumnName="GuardianContactNum" />
+                <ScalarProperty Name="GuardianOccupation" ColumnName="GuardianOccupation" />
+                <ScalarProperty Name="GuardianName" ColumnName="GuardianName" />
+                <ScalarProperty Name="MotherContactNum" ColumnName="MotherContactNum" />
+                <ScalarProperty Name="MotherOccupation" ColumnName="MotherOccupation" />
+                <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+                <ScalarProperty Name="FatherContactNum" ColumnName="FatherContactNum" />
+                <ScalarProperty Name="FatherOccupation" ColumnName="FatherOccupation" />
+                <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="ContactNum" ColumnName="ContactNum" />
+                <ScalarProperty Name="Religion" ColumnName="Religion" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="Birthplace" ColumnName="Birthplace" />
+                <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="StudentNum" ColumnName="StudentNum" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PublicHealthRecordTables">
+            <EntityTypeMapping TypeName="StudentHealthRecordDBModel.PublicHealthRecordTable">
+              <MappingFragment StoreEntitySet="PublicHealthRecordTable">
+                <ScalarProperty Name="ConsentRelationship" ColumnName="ConsentRelationship" />
+                <ScalarProperty Name="ConcentName" ColumnName="ConcentName" />
+                <ScalarProperty Name="OMIOS66" ColumnName="OMIOS66" />
+                <ScalarProperty Name="OMIOS6" ColumnName="OMIOS6" />
+                <ScalarProperty Name="OMIOS5" ColumnName="OMIOS5" />
+                <ScalarProperty Name="OMIOS44" ColumnName="OMIOS44" />
+                <ScalarProperty Name="OMIOS4" ColumnName="OMIOS4" />
+                <ScalarProperty Name="OMIOS36" ColumnName="OMIOS36" />
+                <ScalarProperty Name="OMIOS35" ColumnName="OMIOS35" />
+                <ScalarProperty Name="OMIOS34" ColumnName="OMIOS34" />
+                <ScalarProperty Name="OMIOS33" ColumnName="OMIOS33" />
+                <ScalarProperty Name="OMIOS3" ColumnName="OMIOS3" />
+                <ScalarProperty Name="OMIOSB22" ColumnName="OMIOSB22" />
+                <ScalarProperty Name="OMIOS2" ColumnName="OMIOS2" />
+                <ScalarProperty Name="OMIOS13" ColumnName="OMIOS13" />
+                <ScalarProperty Name="OMIOS12" ColumnName="OMIOS12" />
+                <ScalarProperty Name="OMIOS11" ColumnName="OMIOS11" />
+                <ScalarProperty Name="OMIOS1" ColumnName="OMIOS1" />
+                <ScalarProperty Name="UnfavorableFAge" ColumnName="UnfavorableFAge" />
+                <ScalarProperty Name="UnfavorableEAge" ColumnName="UnfavorableEAge" />
+                <ScalarProperty Name="UnfavorableDAge" ColumnName="UnfavorableDAge" />
+                <ScalarProperty Name="UnfavorableCAge" ColumnName="UnfavorableCAge" />
+                <ScalarProperty Name="UnfavorableBAge" ColumnName="UnfavorableBAge" />
+                <ScalarProperty Name="UnfavorableAAge" ColumnName="UnfavorableAAge" />
+                <ScalarProperty Name="MedicineIAge" ColumnName="MedicineIAge" />
+                <ScalarProperty Name="MedicineHAge" ColumnName="MedicineHAge" />
+                <ScalarProperty Name="MedicineGAge" ColumnName="MedicineGAge" />
+                <ScalarProperty Name="MedicineFAge" ColumnName="MedicineFAge" />
+                <ScalarProperty Name="MedicineEAge" ColumnName="MedicineEAge" />
+                <ScalarProperty Name="MedicineDAge" ColumnName="MedicineDAge" />
+                <ScalarProperty Name="MedicineCAge" ColumnName="MedicineCAge" />
+                <ScalarProperty Name="MedicineBAge" ColumnName="MedicineBAge" />
+                <ScalarProperty Name="MedicineAAge" ColumnName="MedicineAAge" />
+                <ScalarProperty Name="InfectiousDiseasesKAge" ColumnName="InfectiousDiseasesKAge" />
+                <ScalarProperty Name="InfectiousDiseasesJAge" ColumnName="InfectiousDiseasesJAge" />
+                <ScalarProperty Name="InfectiousDiseasesIAge" ColumnName="InfectiousDiseasesIAge" />
+                <ScalarProperty Name="InfectiousDiseasesHAge" ColumnName="InfectiousDiseasesHAge" />
+                <ScalarProperty Name="InfectiousDiseasesGAge" ColumnName="InfectiousDiseasesGAge" />
+                <ScalarProperty Name="InfectiousDiseasesFAge" ColumnName="InfectiousDiseasesFAge" />
+                <ScalarProperty Name="InfectiousDiseasesEAge" ColumnName="InfectiousDiseasesEAge" />
+                <ScalarProperty Name="InfectiousDiseasesDAge" ColumnName="InfectiousDiseasesDAge" />
+                <ScalarProperty Name="InfectiousDiseasesCAge" ColumnName="InfectiousDiseasesCAge" />
+                <ScalarProperty Name="InfectiousDiseasesBAge" ColumnName="InfectiousDiseasesBAge" />
+                <ScalarProperty Name="InfectiousDiseasesAAge" ColumnName="InfectiousDiseasesAAge" />
+                <ScalarProperty Name="ChronicDiseasesFAge" ColumnName="ChronicDiseasesFAge" />
+                <ScalarProperty Name="ChronicDiseasesEAge" ColumnName="ChronicDiseasesEAge" />
+                <ScalarProperty Name="ChronicDiseasesDAge" ColumnName="ChronicDiseasesDAge" />
+                <ScalarProperty Name="ChronicDiseasesCAge" ColumnName="ChronicDiseasesCAge" />
+                <ScalarProperty Name="ChronicDiseasesBAge" ColumnName="ChronicDiseasesBAge" />
+                <ScalarProperty Name="ChronicDiseasesAAge" ColumnName="ChronicDiseasesAAge" />
+                <ScalarProperty Name="NervousSystemGAge" ColumnName="NervousSystemGAge" />
+                <ScalarProperty Name="NervousSystemFAge" ColumnName="NervousSystemFAge" />
+                <ScalarProperty Name="NervousSystemEAge" ColumnName="NervousSystemEAge" />
+                <ScalarProperty Name="NervousSystemDAge" ColumnName="NervousSystemDAge" />
+                <ScalarProperty Name="NervousSystemCAge" ColumnName="NervousSystemCAge" />
+                <ScalarProperty Name="NervousSystemBAge" ColumnName="NervousSystemBAge" />
+                <ScalarProperty Name="NervousSystemAAge" ColumnName="NervousSystemAAge" />
+                <ScalarProperty Name="BoneJointJAge" ColumnName="BoneJointJAge" />
+                <ScalarProperty Name="BoneJointIAge" ColumnName="BoneJointIAge" />
+                <ScalarProperty Name="BoneJointHAge" ColumnName="BoneJointHAge" />
+                <ScalarProperty Name="BoneJointGAge" ColumnName="BoneJointGAge" />
+                <ScalarProperty Name="BoneJointFAge" ColumnName="BoneJointFAge" />
+                <ScalarProperty Name="BoneJointEAge" ColumnName="BoneJointEAge" />
+                <ScalarProperty Name="BoneJointDAge" ColumnName="BoneJointDAge" />
+                <ScalarProperty Name="BoneJointCAge" ColumnName="BoneJointCAge" />
+                <ScalarProperty Name="BoneJointBAge" ColumnName="BoneJointBAge" />
+                <ScalarProperty Name="BoneJointAAge" ColumnName="BoneJointAAge" />
+                <ScalarProperty Name="AbdomenLAge" ColumnName="AbdomenLAge" />
+                <ScalarProperty Name="AbdomenKAge" ColumnName="AbdomenKAge" />
+                <ScalarProperty Name="AbdomenJAge" ColumnName="AbdomenJAge" />
+                <ScalarProperty Name="AbdomenIAge" ColumnName="AbdomenIAge" />
+                <ScalarProperty Name="AbdomenHAge" ColumnName="AbdomenHAge" />
+                <ScalarProperty Name="AbdomenGAge" ColumnName="AbdomenGAge" />
+                <ScalarProperty Name="AbdomenFAge" ColumnName="AbdomenFAge" />
+                <ScalarProperty Name="AbdomenEAge" ColumnName="AbdomenEAge" />
+                <ScalarProperty Name="AbdomenDAge" ColumnName="AbdomenDAge" />
+                <ScalarProperty Name="AbdomenCAge" ColumnName="AbdomenCAge" />
+                <ScalarProperty Name="AbdomenBAge" ColumnName="AbdomenBAge" />
+                <ScalarProperty Name="AbdomenAAge" ColumnName="AbdomenAAge" />
+                <ScalarProperty Name="HLJAge" ColumnName="HLJAge" />
+                <ScalarProperty Name="HLIAge" ColumnName="HLIAge" />
+                <ScalarProperty Name="HLHAge" ColumnName="HLHAge" />
+                <ScalarProperty Name="HLGAge" ColumnName="HLGAge" />
+                <ScalarProperty Name="HLFAge" ColumnName="HLFAge" />
+                <ScalarProperty Name="HLEAge" ColumnName="HLEAge" />
+                <ScalarProperty Name="HLDAge" ColumnName="HLDAge" />
+                <ScalarProperty Name="HLCAge" ColumnName="HLCAge" />
+                <ScalarProperty Name="HLBAge" ColumnName="HLBAge" />
+                <ScalarProperty Name="HLAAge" ColumnName="HLAAge" />
+                <ScalarProperty Name="NeckBAge" ColumnName="NeckBAge" />
+                <ScalarProperty Name="NeckAAge" ColumnName="NeckAAge" />
+                <ScalarProperty Name="ENTOAge" ColumnName="ENTOAge" />
+                <ScalarProperty Name="ENTNAge" ColumnName="ENTNAge" />
+                <ScalarProperty Name="ENTMAge" ColumnName="ENTMAge" />
+                <ScalarProperty Name="ENTLAge" ColumnName="ENTLAge" />
+                <ScalarProperty Name="ENTKAge" ColumnName="ENTKAge" />
+                <ScalarProperty Name="ENTJAge" ColumnName="ENTJAge" />
+                <ScalarProperty Name="ENTIAge" ColumnName="ENTIAge" />
+                <ScalarProperty Name="ENTHAge" ColumnName="ENTHAge" />
+                <ScalarProperty Name="ENTGAge" ColumnName="ENTGAge" />
+                <ScalarProperty Name="ENTFAge" ColumnName="ENTFAge" />
+                <ScalarProperty Name="ENTEAge" ColumnName="ENTEAge" />
+                <ScalarProperty Name="ENTDAge" ColumnName="ENTDAge" />
+                <ScalarProperty Name="ENTCAge" ColumnName="ENTCAge" />
+                <ScalarProperty Name="ENTBAge" ColumnName="ENTBAge" />
+                <ScalarProperty Name="ENTAAge" ColumnName="ENTAAge" />
+                <ScalarProperty Name="EyesCAge" ColumnName="EyesCAge" />
+                <ScalarProperty Name="EyesBAge" ColumnName="EyesBAge" />
+                <ScalarProperty Name="EyesAAge" ColumnName="EyesAAge" />
+                <ScalarProperty Name="HeadCAge" ColumnName="HeadCAge" />
+                <ScalarProperty Name="HeadBAge" ColumnName="HeadBAge" />
+                <ScalarProperty Name="HeadAAge" ColumnName="HeadAAge" />
+                <ScalarProperty Name="UnfavorableF" ColumnName="UnfavorableF" />
+                <ScalarProperty Name="UnfavorableE" ColumnName="UnfavorableE" />
+                <ScalarProperty Name="UnfavorableD" ColumnName="UnfavorableD" />
+                <ScalarProperty Name="UnfavorableC" ColumnName="UnfavorableC" />
+                <ScalarProperty Name="UnfavorableB" ColumnName="UnfavorableB" />
+                <ScalarProperty Name="UnfavorableA" ColumnName="UnfavorableA" />
+                <ScalarProperty Name="MedicineI" ColumnName="MedicineI" />
+                <ScalarProperty Name="MedicineH" ColumnName="MedicineH" />
+                <ScalarProperty Name="MedicineG" ColumnName="MedicineG" />
+                <ScalarProperty Name="MedicineF" ColumnName="MedicineF" />
+                <ScalarProperty Name="MedicineE" ColumnName="MedicineE" />
+                <ScalarProperty Name="MedicineD" ColumnName="MedicineD" />
+                <ScalarProperty Name="MedicineC" ColumnName="MedicineC" />
+                <ScalarProperty Name="MedicineB" ColumnName="MedicineB" />
+                <ScalarProperty Name="MedicineA" ColumnName="MedicineA" />
+                <ScalarProperty Name="InfectiousDiseasesK" ColumnName="InfectiousDiseasesK" />
+                <ScalarProperty Name="InfectiousDiseasesJ" ColumnName="InfectiousDiseasesJ" />
+                <ScalarProperty Name="InfectiousDiseasesI" ColumnName="InfectiousDiseasesI" />
+                <ScalarProperty Name="InfectiousDiseasesH" ColumnName="InfectiousDiseasesH" />
+                <ScalarProperty Name="InfectiousDiseasesG" ColumnName="InfectiousDiseasesG" />
+                <ScalarProperty Name="InfectiousDiseasesF" ColumnName="InfectiousDiseasesF" />
+                <ScalarProperty Name="InfectiousDiseasesE" ColumnName="InfectiousDiseasesE" />
+                <ScalarProperty Name="InfectiousDiseasesD" ColumnName="InfectiousDiseasesD" />
+                <ScalarProperty Name="InfectiousDiseasesC" ColumnName="InfectiousDiseasesC" />
+                <ScalarProperty Name="InfectiousDiseasesB" ColumnName="InfectiousDiseasesB" />
+                <ScalarProperty Name="InfectiousDiseasesA" ColumnName="InfectiousDiseasesA" />
+                <ScalarProperty Name="ChronicDiseasesF" ColumnName="ChronicDiseasesF" />
+                <ScalarProperty Name="ChronicDiseasesE" ColumnName="ChronicDiseasesE" />
+                <ScalarProperty Name="ChronicDiseasesD" ColumnName="ChronicDiseasesD" />
+                <ScalarProperty Name="ChronicDiseasesC" ColumnName="ChronicDiseasesC" />
+                <ScalarProperty Name="ChronicDiseasesB" ColumnName="ChronicDiseasesB" />
+                <ScalarProperty Name="ChronicDiseasesA" ColumnName="ChronicDiseasesA" />
+                <ScalarProperty Name="NervousSystemG" ColumnName="NervousSystemG" />
+                <ScalarProperty Name="NervousSystemF" ColumnName="NervousSystemF" />
+                <ScalarProperty Name="NervousSystemE" ColumnName="NervousSystemE" />
+                <ScalarProperty Name="NervousSystemD" ColumnName="NervousSystemD" />
+                <ScalarProperty Name="NervousSystemC" ColumnName="NervousSystemC" />
+                <ScalarProperty Name="NervousSystemB" ColumnName="NervousSystemB" />
+                <ScalarProperty Name="NervousSystemA" ColumnName="NervousSystemA" />
+                <ScalarProperty Name="BoneJointJ" ColumnName="BoneJointJ" />
+                <ScalarProperty Name="BoneJointI" ColumnName="BoneJointI" />
+                <ScalarProperty Name="BoneJointH" ColumnName="BoneJointH" />
+                <ScalarProperty Name="BoneJointG" ColumnName="BoneJointG" />
+                <ScalarProperty Name="BoneJointF" ColumnName="BoneJointF" />
+                <ScalarProperty Name="BoneJointE" ColumnName="BoneJointE" />
+                <ScalarProperty Name="BoneJointD" ColumnName="BoneJointD" />
+                <ScalarProperty Name="BoneJointC" ColumnName="BoneJointC" />
+                <ScalarProperty Name="BoneJointB" ColumnName="BoneJointB" />
+                <ScalarProperty Name="BoneJointA" ColumnName="BoneJointA" />
+                <ScalarProperty Name="AbdomenL" ColumnName="AbdomenL" />
+                <ScalarProperty Name="AbdomenK" ColumnName="AbdomenK" />
+                <ScalarProperty Name="AbdomenJ" ColumnName="AbdomenJ" />
+                <ScalarProperty Name="AbdomenI" ColumnName="AbdomenI" />
+                <ScalarProperty Name="AbdomenH" ColumnName="AbdomenH" />
+                <ScalarProperty Name="AbdomenG" ColumnName="AbdomenG" />
+                <ScalarProperty Name="AbdomenF" ColumnName="AbdomenF" />
+                <ScalarProperty Name="AbdomenE" ColumnName="AbdomenE" />
+                <ScalarProperty Name="AbdomenD" ColumnName="AbdomenD" />
+                <ScalarProperty Name="AbdomenC" ColumnName="AbdomenC" />
+                <ScalarProperty Name="AbdomenB" ColumnName="AbdomenB" />
+                <ScalarProperty Name="AbdomenA" ColumnName="AbdomenA" />
+                <ScalarProperty Name="HLJ" ColumnName="HLJ" />
+                <ScalarProperty Name="HLI" ColumnName="HLI" />
+                <ScalarProperty Name="HLH" ColumnName="HLH" />
+                <ScalarProperty Name="HLG" ColumnName="HLG" />
+                <ScalarProperty Name="HLF" ColumnName="HLF" />
+                <ScalarProperty Name="HLE" ColumnName="HLE" />
+                <ScalarProperty Name="HLD" ColumnName="HLD" />
+                <ScalarProperty Name="HLC" ColumnName="HLC" />
+                <ScalarProperty Name="HLB" ColumnName="HLB" />
+                <ScalarProperty Name="HLA" ColumnName="HLA" />
+                <ScalarProperty Name="NeckB" ColumnName="NeckB" />
+                <ScalarProperty Name="NeckA" ColumnName="NeckA" />
+                <ScalarProperty Name="ENTO" ColumnName="ENTO" />
+                <ScalarProperty Name="ENTN" ColumnName="ENTN" />
+                <ScalarProperty Name="ENTM" ColumnName="ENTM" />
+                <ScalarProperty Name="ENTL" ColumnName="ENTL" />
+                <ScalarProperty Name="ENTK" ColumnName="ENTK" />
+                <ScalarProperty Name="ENTJ" ColumnName="ENTJ" />
+                <ScalarProperty Name="ENTI" ColumnName="ENTI" />
+                <ScalarProperty Name="ENTH" ColumnName="ENTH" />
+                <ScalarProperty Name="ENTG" ColumnName="ENTG" />
+                <ScalarProperty Name="ENTF" ColumnName="ENTF" />
+                <ScalarProperty Name="ENTE" ColumnName="ENTE" />
+                <ScalarProperty Name="ENTD" ColumnName="ENTD" />
+                <ScalarProperty Name="ENTC" ColumnName="ENTC" />
+                <ScalarProperty Name="ENTB" ColumnName="ENTB" />
+                <ScalarProperty Name="ENTA" ColumnName="ENTA" />
+                <ScalarProperty Name="EyesC" ColumnName="EyesC" />
+                <ScalarProperty Name="EyesB" ColumnName="EyesB" />
+                <ScalarProperty Name="EyesA" ColumnName="EyesA" />
+                <ScalarProperty Name="HeadC" ColumnName="HeadC" />
+                <ScalarProperty Name="HeadB" ColumnName="HeadB" />
+                <ScalarProperty Name="HeadA" ColumnName="HeadA" />
+                <ScalarProperty Name="Discomfort" ColumnName="Discomfort" />
+                <ScalarProperty Name="Flow" ColumnName="Flow" />
+                <ScalarProperty Name="RegularCycle" ColumnName="RegularCycle" />
+                <ScalarProperty Name="AOOOM" ColumnName="AOOOM" />
+                <ScalarProperty Name="CircumcisionDate" ColumnName="CircumcisionDate" />
+                <ScalarProperty Name="Circumcision" ColumnName="Circumcision" />
+                <ScalarProperty Name="HerniaDate" ColumnName="HerniaDate" />
+                <ScalarProperty Name="Hernia" ColumnName="Hernia" />
+                <ScalarProperty Name="AOOOPH" ColumnName="AOOOPH" />
+                <ScalarProperty Name="AOOOGE" ColumnName="AOOOGE" />
+                <ScalarProperty Name="VervalRelevantDetails" ColumnName="VervalRelevantDetails" />
+                <ScalarProperty Name="Verval" ColumnName="Verval" />
+                <ScalarProperty Name="SexualRelevantDetails" ColumnName="SexualRelevantDetails" />
+                <ScalarProperty Name="Sexual" ColumnName="Sexual" />
+                <ScalarProperty Name="PhysicalRelevantDetails" ColumnName="PhysicalRelevantDetails" />
+                <ScalarProperty Name="Physical" ColumnName="Physical" />
+                <ScalarProperty Name="ObesityRelation" ColumnName="ObesityRelation" />
+                <ScalarProperty Name="Obesity" ColumnName="Obesity" />
+                <ScalarProperty Name="StrokeRelation" ColumnName="StrokeRelation" />
+                <ScalarProperty Name="Stroke" ColumnName="Stroke" />
+                <ScalarProperty Name="MentalDisorderRelation" ColumnName="MentalDisorderRelation" />
+                <ScalarProperty Name="MentalDisorder" ColumnName="MentalDisorder" />
+                <ScalarProperty Name="BleedingDisorderRelation" ColumnName="BleedingDisorderRelation" />
+                <ScalarProperty Name="BleedingDisorder" ColumnName="BleedingDisorder" />
+                <ScalarProperty Name="AsthmaRelation" ColumnName="AsthmaRelation" />
+                <ScalarProperty Name="FamilyAsthma" ColumnName="FamilyAsthma" />
+                <ScalarProperty Name="TubercolosisRelation" ColumnName="TubercolosisRelation" />
+                <ScalarProperty Name="Tubercolosis" ColumnName="Tubercolosis" />
+                <ScalarProperty Name="SeizureDisorderRelation" ColumnName="SeizureDisorderRelation" />
+                <ScalarProperty Name="SeizureDisorder" ColumnName="SeizureDisorder" />
+                <ScalarProperty Name="KidneyProblemRelation" ColumnName="KidneyProblemRelation" />
+                <ScalarProperty Name="KidneyProblem" ColumnName="KidneyProblem" />
+                <ScalarProperty Name="DiabetesRelation" ColumnName="DiabetesRelation" />
+                <ScalarProperty Name="FamilyDiabetes" ColumnName="FamilyDiabetes" />
+                <ScalarProperty Name="HighBloodRelation" ColumnName="HighBloodRelation" />
+                <ScalarProperty Name="HighBlood" ColumnName="HighBlood" />
+                <ScalarProperty Name="HeartRelationProblem" ColumnName="HeartRelationProblem" />
+                <ScalarProperty Name="HeartProblem" ColumnName="HeartProblem" />
+                <ScalarProperty Name="CancerRelation" ColumnName="CancerRelation" />
+                <ScalarProperty Name="Cancer" ColumnName="Cancer" />
+                <ScalarProperty Name="Operation" ColumnName="Operation" />
+                <ScalarProperty Name="Hospitalization" ColumnName="Hospitalization" />
+                <ScalarProperty Name="Scolosis" ColumnName="Scolosis" />
+                <ScalarProperty Name="Fractures" ColumnName="Fractures" />
+                <ScalarProperty Name="Fainting" ColumnName="Fainting" />
+                <ScalarProperty Name="PastDiabetes" ColumnName="PastDiabetes" />
+                <ScalarProperty Name="Epilepsy" ColumnName="Epilepsy" />
+                <ScalarProperty Name="Convulsion" ColumnName="Convulsion" />
+                <ScalarProperty Name="KidneyDisease" ColumnName="KidneyDisease" />
+                <ScalarProperty Name="HeartDisease" ColumnName="HeartDisease" />
+                <ScalarProperty Name="Insomnias" ColumnName="Insomnias" />
+                <ScalarProperty Name="Parasitism" ColumnName="Parasitism" />
+                <ScalarProperty Name="Tonsilitis" ColumnName="Tonsilitis" />
+                <ScalarProperty Name="EarDischarge" ColumnName="EarDischarge" />
+                <ScalarProperty Name="PrimaryComplex" ColumnName="PrimaryComplex" />
+                <ScalarProperty Name="Pneumonia" ColumnName="Pneumonia" />
+                <ScalarProperty Name="Mumps" ColumnName="Mumps" />
+                <ScalarProperty Name="Measles" ColumnName="Measles" />
+                <ScalarProperty Name="ThypoidFever" ColumnName="ThypoidFever" />
+                <ScalarProperty Name="DengueFever" ColumnName="DengueFever" />
+                <ScalarProperty Name="ChickenFox" ColumnName="ChickenFox" />
+                <ScalarProperty Name="EatingDisorder" ColumnName="EatingDisorder" />
+                <ScalarProperty Name="Jaundice" ColumnName="Jaundice" />
+                <ScalarProperty Name="RecurrentIndigestion" ColumnName="RecurrentIndigestion" />
+                <ScalarProperty Name="VisualProblem" ColumnName="VisualProblem" />
+                <ScalarProperty Name="SpeechProblem" ColumnName="SpeechProblem" />
+                <ScalarProperty Name="HearingProblem" ColumnName="HearingProblem" />
+                <ScalarProperty Name="BehavioralProblem" ColumnName="BehavioralProblem" />
+                <ScalarProperty Name="BleedingProblem" ColumnName="BleedingProblem" />
+                <ScalarProperty Name="Anemia" ColumnName="Anemia" />
+                <ScalarProperty Name="PastAsthma" ColumnName="PastAsthma" />
+                <ScalarProperty Name="Allergy" ColumnName="Allergy" />
+                <ScalarProperty Name="NameofFamilyDoctor" ColumnName="NameofFamilyDoctor" />
+                <ScalarProperty Name="HospitalContactNum" ColumnName="HospitalContactNum" />
+                <ScalarProperty Name="AddressofHospital" ColumnName="AddressofHospital" />
+                <ScalarProperty Name="HospitalofChoice" ColumnName="HospitalofChoice" />
+                <ScalarProperty Name="GuardianContactNum" ColumnName="GuardianContactNum" />
+                <ScalarProperty Name="GuardianOccupation" ColumnName="GuardianOccupation" />
+                <ScalarProperty Name="GuardianName" ColumnName="GuardianName" />
+                <ScalarProperty Name="MotherContactNum" ColumnName="MotherContactNum" />
+                <ScalarProperty Name="MotherOccupation" ColumnName="MotherOccupation" />
+                <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+                <ScalarProperty Name="FatherContactNum" ColumnName="FatherContactNum" />
+                <ScalarProperty Name="FatherOccupation" ColumnName="FatherOccupation" />
+                <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="ContactNum" ColumnName="ContactNum" />
+                <ScalarProperty Name="Religion" ColumnName="Religion" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="Birthplace" ColumnName="Birthplace" />
+                <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="StudentNum" ColumnName="StudentNum" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

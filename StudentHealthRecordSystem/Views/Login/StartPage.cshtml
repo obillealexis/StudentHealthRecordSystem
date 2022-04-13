@@ -1,0 +1,53 @@
+﻿@model DatabaseDriver.DATA.user
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/Raw.cshtml";
+}
+
+
+@section Center{
+    <div>
+        <div class="row">
+
+            <div class="col-md-3 col-md-offset-4" style="position: absolute; left: 700px; bottom: 450px; background-color: #00ff80;">
+
+                <div style="padding:10px;">
+
+                    @using (Html.BeginForm("Index", "Login", FormMethod.Post))
+                    {
+                        <table height="200" style="border: 1px;">
+                            <tr>
+                                <th colspan="2" class="text-center" style="font-size:25px;">BCAS Student Health Record System</th>
+                            </tr>
+                            <tr>
+                                <td>Username </td>
+                                <td>
+                                    @Html.TextBoxFor(model => model.username, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Password </td>
+                                <td>
+                                    @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+                                    <p class="text-danger">@ViewBag.ErrorMessage</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input type="submit" value="Login" name="login" class="btn btn-info" />
+                                    <a href="/Login/Reset" class="btn btn-danger">Reset</a>
+                                </td>
+                            </tr>
+                        </table>
+                    }
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+}

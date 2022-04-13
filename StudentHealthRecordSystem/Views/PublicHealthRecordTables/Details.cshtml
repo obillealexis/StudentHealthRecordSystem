@@ -1,0 +1,2251 @@
+﻿@model DatabaseDriver.DATA.PublicHealthRecordTable
+
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<form id="regForm" action="">
+
+    <!-- One "tab" for each step in the form: -->
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+
+            <div class="card-body p-4 p-md-5">
+                <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 text-center text-success">STUDENT'S HEALTH RECORD FORM</h3>
+                <form>
+                    <div class="tab">
+                        <div class="row">
+                            <h3 class="col-md-12 mb-4 text-success">Student Information</h3>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="firstName">First Name: </label><br>
+                                    @Html.DisplayFor(model => model.FirstName)
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="MiddleName">Middle Name: </label><br>
+                                    @Html.DisplayFor(model => model.MiddleName)
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="lastName">Last Name: </label><br>
+                                    @Html.DisplayFor(model => model.LastName)
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="StudentNum">Student Number: </label><br>
+                                    @Html.DisplayFor(model => model.StudentNum)
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline">
+                                    <label class="form-label" for="Sex">Sex: </label><br>
+                                    @Html.DisplayFor(model => model.Sex)
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="Birthdate">Date of Birth: </label><br>
+                                    @Html.DisplayFor(model => model.Birthdate)
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="Birthplace">Birth Place: </label><br>
+                                    @Html.DisplayFor(model => model.Birthplace)
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="Nationality">Nationality: </label><br>
+                                    @Html.DisplayFor(model => model.Nationality)
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="Religion">Religion: </label><br>
+                                    @Html.DisplayFor(model => model.Religion)
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="ContactNum">Contact Number: </label><br>
+                                    @Html.DisplayFor(model => model.ContactNum)
+                                </div>
+
+                            </div>
+                            <div class="col-md-12 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="Address">Address: </label><br>
+                                    @Html.DisplayFor(model => model.Address)
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="FatherName">Father's Full Name: </label><br>
+                                    @Html.DisplayFor(model => model.FatherName)
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="FOccupation">Occupation: </label><br>
+                                    @Html.DisplayFor(model => model.FatherOccupation)
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="FContact">Contact Number: </label><br>
+                                    @Html.DisplayFor(model => model.FatherContactNum)
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="MotherName">Mother's Full Name: </label><br>
+                                    @Html.DisplayFor(model => model.MotherName)
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="MOccupation">Occupation: </label><br>
+                                    @Html.DisplayFor(model => model.MotherOccupation)
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="MContact">Contact Number: </label><br>
+                                    @Html.DisplayFor(model => model.MotherContactNum)
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="">Guardian's Name: </label><br>
+                                    @Html.DisplayFor(model => model.GuardianName)
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="">Occupation: </label><br>
+                                    @Html.DisplayFor(model => model.GuardianOccupation)
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="">Contact Number: </label><br>
+                                    @Html.DisplayFor(model => model.GuardianContactNum)
+                                </div>
+
+                            </div>
+                            <div class="col-md-12 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="HospitalChoice">Hospital of Choice for Referral or Admission: </label><br>
+                                    @Html.DisplayFor(model => model.HospitalofChoice)
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="HospitalAdress">Address of Hospital: </label><br>
+                                    @Html.DisplayFor(model => model.AddressofHospital)
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="HospitalContactNum">Hospital Contact Number: </label><br>
+                                    @Html.DisplayFor(model => model.HospitalContactNum)
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="FamilyDoctor">Name of Family Doctor: </label><br>
+                                    @Html.DisplayFor(model => model.NameofFamilyDoctor)
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="tab">
+                        <div class="row">
+                            <h3 class="col-md-12 mb-4 text-success">Past Medical History of Student</h3>
+                            <h6 class="col-md-12 mb-4">Has the child suffered from any of the following?</h6>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Allergy">ALLERGY: </label><br>
+                                    @Html.DisplayFor(model => model.Allergy)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Asthma">ASTHMA: </label><br>
+                                    @Html.DisplayFor(model => model.PastAsthma)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Anemia">ANEMIA: </label><br>
+                                    @Html.DisplayFor(model => model.Anemia)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="BleedingProblem">BLEEDING PROBLEM: </label><br>
+                                    @Html.DisplayFor(model => model.BleedingProblem)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="BehavioralProblem">BEHAVIORAL PROBLEM: </label><br>
+                                    @Html.DisplayFor(model => model.BehavioralProblem)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="HearingProblem">HEARING PROBLEM: </label><br>
+                                    @Html.DisplayFor(model => model.HearingProblem)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="SpeechProblem">SPEECH PROBLEM: </label><br>
+                                    @Html.DisplayFor(model => model.SpeechProblem)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="VisualProblem">VISUAL PROBLEM: </label><br>
+                                    @Html.DisplayFor(model => model.VisualProblem)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="RecurrentIndigestion">RECURRENT INDIGESTION: </label><br>
+                                    @Html.DisplayFor(model => model.RecurrentIndigestion)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Jaundice">JAUNDICE: </label><br>
+                                    @Html.DisplayFor(model => model.Jaundice)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="EatingDisorder">EATING DISORDER: </label><br>
+                                    @Html.DisplayFor(model => model.EatingDisorder)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="ChickenPox">CHICKEN POX: </label><br>
+                                    @Html.DisplayFor(model => model.ChickenFox)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="DengueFever">DENGUE FEVER: </label><br>
+                                    @Html.DisplayFor(model => model.DengueFever)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="ThypoidFever">TYPHOID FEVER: </label><br>
+                                    @Html.DisplayFor(model => model.ThypoidFever)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Measles">MEASLES: </label><br>
+                                    @Html.DisplayFor(model => model.Measles)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Mumps">MUMPS: </label><br>
+                                    @Html.DisplayFor(model => model.Mumps)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Pneumonia">PNEUMONIA: </label><br>
+                                    @Html.DisplayFor(model => model.Pneumonia)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="PrimaryComplex">PRIMARY COMPLEX: </label><br>
+                                    @Html.DisplayFor(model => model.PrimaryComplex)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="EarDischarge">EAR DISCHARGE: </label><br>
+                                    @Html.DisplayFor(model => model.EarDischarge)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Tonsilitis">TONSILITIS: </label><br>
+                                    @Html.DisplayFor(model => model.Tonsilitis)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Parasitism">PARASITISM: </label><br>
+                                    @Html.DisplayFor(model => model.Parasitism)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Insomnias">INSOMNIAS: </label><br>
+                                    @Html.DisplayFor(model => model.Insomnias)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="HearthDiseases">HEARTH DISEASES: </label><br>
+                                    @Html.DisplayFor(model => model.HeartDisease)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="KidneyDiseases">KIDNEY DISEASES: </label><br>
+                                    @Html.DisplayFor(model => model.KidneyDisease)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Convulsion">CONVULSION: </label><br>
+                                    @Html.DisplayFor(model => model.Convulsion)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Epilepsy">EPILEPSY: </label><br>
+                                    @Html.DisplayFor(model => model.Epilepsy)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Diabetes">DIABETES: </label><br>
+                                    @Html.DisplayFor(model => model.PastDiabetes)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Fainting">FAINTING: </label><br>
+                                    @Html.DisplayFor(model => model.Fainting)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Fractures">FRACTURES: </label><br>
+                                    @Html.DisplayFor(model => model.Fractures)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Scoliosis">SCOLIOSIS: </label><br>
+                                    @Html.DisplayFor(model => model.Scolosis)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Hospitalization">HOSPITALIZATION: </label><br>
+                                    @Html.DisplayFor(model => model.Hospitalization)
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="Operation">OPERATION: </label><br>
+                                    @Html.DisplayFor(model => model.Operation)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab">
+                        <div class="row">
+                            <h3 class="col-md-12 mb-4 text-success">Family Medical History</h3>
+                            <h6 class="col-md-12 mb-4">Has any of the members of the family suffered from the following?</h6>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">CANCER</label><br>
+                                    @Html.DisplayFor(model => model.Cancer)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Relation of the Student</label><br>
+                                    @Html.DisplayFor(model => model.CancerRelation)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">HEART PROBLEM</label><br>
+                                    @Html.DisplayFor(model => model.HeartProblem)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Relation of the Student</label><br>
+                                    @Html.DisplayFor(model => model.HeartRelationProblem)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">HIGH BLOOD</label><br>
+                                    @Html.DisplayFor(model => model.HighBlood)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Relation of the Student</label><br>
+                                    @Html.DisplayFor(model => model.HighBloodRelation)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">DIABETES</label><br>
+                                    @Html.DisplayFor(model => model.FamilyDiabetes)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Relation of the Student</label><br>
+                                    @Html.DisplayFor(model => model.DiabetesRelation)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">KIDNEY PROBLEM</label><br>
+                                    @Html.DisplayFor(model => model.KidneyProblem)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Relation of the Student</label><br>
+                                    @Html.DisplayFor(model => model.KidneyProblemRelation)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">SEIZURE DISORDER</label><br>
+                                    @Html.DisplayFor(model => model.SeizureDisorder)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Relation of the Student</label><br>
+                                    @Html.DisplayFor(model => model.SeizureDisorderRelation)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">TUBERCULOSIS</label><br>
+                                    @Html.DisplayFor(model => model.Tubercolosis)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Relation of the Student</label><br>
+                                    @Html.DisplayFor(model => model.TubercolosisRelation)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">ASTHMA</label><br>
+                                    @Html.DisplayFor(model => model.FamilyAsthma)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Relation of the Student</label><br>
+                                    @Html.DisplayFor(model => model.AsthmaRelation)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">BLEEDING DISORDER</label><br>
+                                    @Html.DisplayFor(model => model.BleedingDisorder)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Relation of the Student</label><br>
+                                    @Html.DisplayFor(model => model.BleedingDisorderRelation)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">MENTAL DISORDER</label><br>
+                                    @Html.DisplayFor(model => model.MentalDisorder)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Relation of the Student</label><br>
+                                    @Html.DisplayFor(model => model.MentalDisorderRelation)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">STROKE</label><br>
+                                    @Html.DisplayFor(model => model.Stroke)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Relation of the Student</label><br>
+                                    @Html.DisplayFor(model => model.StrokeRelation)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">OBESITY</label><br>
+                                    @Html.DisplayFor(model => model.Obesity)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Relation of the Student</label><br>
+                                    @Html.DisplayFor(model => model.ObesityRelation)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="row">
+                            <h3 class="col-md-12 mb-4 text-success">Psychological History</h3>
+                            <h6 class="col-md-12 mb-4">Has the child suffered from any of the following?</h6>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">PHYSICAL ABUSE</label><br>
+                                    @Html.DisplayFor(model => model.Physical)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">If Yes, Please give relevant details</label><br>
+                                    @Html.DisplayFor(model => model.PhysicalRelevantDetails)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">SEXUAL ABUSE</label><br>
+                                    @Html.DisplayFor(model => model.Sexual)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">If Yes, Please give relevant details</label><br>
+                                    @Html.DisplayFor(model => model.SexualRelevantDetails)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">VERBAL ABUSE</label><br>
+                                    @Html.DisplayFor(model => model.Verval)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">If Yes, Please give relevant details</label>
+                                    @Html.DisplayFor(model => model.VervalRelevantDetails)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="row">
+                            <div id="MaleOnly" @*style="display:none;"*@ class="col-md-12 mb-4 form-label text-center">
+                                <h3 class="col-md-12 mb-4 text-success">Other Medical Information of Student</h3>
+                                <label id="MalePart" class="col-md-12 mb-4 form-label text-center text-success" for="">FOR MALE STUDENT/CHILD</label>
+                                <div id="AOOOGE1" class="col-md-6 mb-4">
+                                    <div class="form-outline text-center">
+                                        <label class="form-label" for="">Age of onset of genital enlargement</label><br>
+                                        @Html.DisplayFor(model => model.AOOOGE)
+                                    </div>
+                                </div>
+                                <div id="AOOOPH1" class="col-md-6 mb-4">
+                                    <div class="form-outline text-center">
+                                        <label class="form-label" for="">Age of onset pubic hair</label><br>
+                                        @Html.DisplayFor(model => model.AOOOPH)
+                                    </div>
+                                </div>
+                                <div id="Hernia1" class="col-md-6 mb-4">
+                                    <div class="form-outline text-center">
+                                        <label class="form-label" for="">Did your child suffer from Hernia?</label><br>
+                                        @Html.DisplayFor(model => model.Hernia)
+                                    </div>
+                                </div>
+                                <div id="HerniaDate1" class="col-md-6 mb-4">
+                                    <div class="form-outline text-center">
+                                        <label class="form-label" for="">If yes, when?</label><br>
+                                        @Html.DisplayFor(model => model.HerniaDate)
+
+                                    </div>
+                                </div>
+                                <div id="Circumcision1" class="col-md-6 mb-4">
+                                    <div class="form-outline text-center">
+                                        <label class="form-label" for="">Circumcision?</label><br>
+                                        @Html.DisplayFor(model => model.Circumcision)
+                                    </div>
+                                </div>
+                                <div id="CircumcisionDate1" class="col-md-6 mb-4">
+                                    <div class="form-outline text-center">
+                                        <label class="form-label" for="">If done, when?</label><br>
+                                        @Html.DisplayFor(model => model.CircumcisionDate)
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="FemaleOnly" @*style="display:none;"*@ class="col-md-12 mb-4 form-label text-center">
+                                <label id="MalePart" class="col-md-12 mb-4 form-label text-center text-success" for="">FOR FEMALE STUDENT/CHILD</label>
+                                <div id="AOOOM1" class="col-md-6 mb-4">
+                                    <div class="form-outline text-center">
+                                        <label class="form-label" for="">Age of onset of menstruation</label><br>
+                                        @Html.DisplayFor(model => model.AOOOM)
+                                    </div>
+                                </div>
+                                <div id="RegularCycle1" class="col-md-6 mb-4">
+                                    <div class="form-outline text-center">
+                                        <label class="form-label" for="">Is cycle regular?</label><br>
+                                        @Html.DisplayFor(model => model.RegularCycle)
+                                    </div>
+                                </div>
+                                <div id="Flow1" class="col-md-6 mb-4">
+                                    <div class="form-outline text-center">
+                                        <label class="form-label" for="">Menstruation Flow</label><br>
+                                        @Html.DisplayFor(model => model.Flow)
+                                    </div>
+                                </div>
+                                <div id="Discomfort1" class="col-md-6 mb-4">
+                                    <div class="form-outline text-center">
+                                        <label class="form-label" for="">Menstruation Discomfort</label><br>
+                                        @Html.DisplayFor(model => model.Discomfort)
+                                    </div>
+                                </div>
+                            </div>
+
+                            <label class="col-md-12 mb-4 form-label text-center text-success" for="">Other Medical Information</label>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">1. Is your child under medical treatment?</label><br>
+                                    @Html.DisplayFor(model => model.OMIOS1)
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">If Yes, for what?</label><br>
+                                    @Html.DisplayFor(model => model.OMIOS11)
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Please specify medicine/s, its dosage and schedule.</label><br>
+                                    @Html.DisplayFor(model => model.OMIOS12)
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label"><br> Is school nurse assistance required?</label><br>
+                                    @Html.DisplayFor(model => model.OMIOS13)
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">2. Does your child ever have psychiatric evaluation?</label><br>
+                                    @Html.DisplayFor(model => model.OMIOS2)
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for=""><br> If Yes, explain?</label><br>
+                                    @Html.DisplayFor(model => model.OMIOSB22)
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">3. Have your child undergone X-ray procedure?</label><br>
+                                    @Html.DisplayFor(model => model.OMIOS3)
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for=""><br> If Yes, when?</label><br>
+                                    @Html.DisplayFor(model => model.OMIOS33)
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for=""> for what?</label><br>
+                                    @Html.DisplayFor(model => model.OMIOS34)
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">What is the result?</label><br>
+                                    @Html.DisplayFor(model => model.OMIOS35)
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Examined by whom?</label><br>
+                                    @Html.DisplayFor(model => model.OMIOS36)
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for=""></label>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">4. Have your child had a tuberculin skin test within the last years?</label><br>
+                                    @Html.DisplayFor(model => model.OMIOS4)
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label"><br> If Yes, indicate the result</label><br>
+                                    @Html.DisplayFor(model => model.OMIOS44)
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">5. When was the last dental check-up of your child?</label><br>
+                                    @Html.DisplayFor(model => model.OMIOS5)
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for=""></label>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">6. Does your child have any medical/physical condition which would require a special treatment?</label><br>
+                                    @Html.DisplayFor(model => model.OMIOS6)
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for=""><br><br> If Yes, explain?</label><br>
+                                    @Html.DisplayFor(model => model.OMIOS66)
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="row">
+                            <h3 class="col-md-12 mb-4 text-success">Review of System</h3>
+                            <h6 class="col-md-12 mb-4">Have your child ever had or has any of the following? If YES, at what age?</h6>
+                            <h4 class="col-md-12 mb-4 text-success">HEAD</h4>
+
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">headache, frequent or severe</label><br>
+                                    @Html.DisplayFor(model => model.HeadA)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.HeadAAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">dizziness or fainting spell</label><br>
+                                    @Html.DisplayFor(model => model.HeadB)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.HeadBAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">severe head injury</label><br>
+                                    @Html.DisplayFor(model => model.HeadC)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.HeadCAge)
+                                </div>
+                            </div>
+                            <h4 class="col-md-12 mb-4 text-success">EYES</h4>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">worn glasses</label><br>
+                                    @Html.DisplayFor(model => model.EyesA)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.EyesAAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">worn contact lens</label><br>
+                                    @Html.DisplayFor(model => model.EyesB)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.EyesBAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">eye trouble</label><br>
+                                    @Html.DisplayFor(model => model.EyesC)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.EyesCAge)
+                                </div>
+                            </div>
+                            <h4 class="col-md-12 mb-4 text-success">EARS, NOSE, THROAT</h4><br>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">ear, nose, throat trouble</label><br>
+                                    @Html.DisplayFor(model => model.ENTA)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.ENTAAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">difficuty in hearing</label><br>
+                                    @Html.DisplayFor(model => model.ENTB)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.ENTBAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">worn hearing aid</label><br>
+                                    @Html.DisplayFor(model => model.ENTC)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.ENTCAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">ruptuned or perforated ear drum</label><br>
+                                    @Html.DisplayFor(model => model.ENTD)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.ENTDAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">chronic running ear or fungus infection</label><br>
+                                    @Html.DisplayFor(model => model.ENTE)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.ENTEAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">chronic of prequent colds</label><br>
+                                    @Html.DisplayFor(model => model.ENTF)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.ENTFAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">stuttered, stammered or lisped</label><br>
+                                    @Html.DisplayFor(model => model.ENTG)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.ENTGAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">severe tooth or gum trouble</label><br>
+                                    @Html.DisplayFor(model => model.ENTH)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.ENTHAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">bleeds excessively after injury</label><br>
+                                    @Html.DisplayFor(model => model.ENTI)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.ENTIAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">sinusitis</label><br>
+                                    @Html.DisplayFor(model => model.ENTJ)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.ENTJAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">hay fever / allergic rhinitis</label><br>
+                                    @Html.DisplayFor(model => model.ENTK)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.ENTKAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">sore throats, frequent or severe</label><br>
+                                    @Html.DisplayFor(model => model.ENTL)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.ENTLAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">tonsils or adenoids removed</label><br>
+                                    @Html.DisplayFor(model => model.ENTM)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.ENTMAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">operation of nose</label><br>
+                                    @Html.DisplayFor(model => model.ENTN)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.ENTNAge)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="row">
+                            <h3 class="col-md-12 mb-4 text-success">Review of System</h3>
+                            <h6 class="col-md-12 mb-4">Have your child ever had or has any of the following? If YES, at what age?</h6>
+                            <h4 class="col-md-12 mb-4 text-success">NECK</h4>
+
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">enlarged mass</label><br>
+                                    @Html.DisplayFor(model => model.NeckA)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.NeckAAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">lymphadenitis</label><br>
+                                    @Html.DisplayFor(model => model.NeckB)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.NeckBAge)
+                                </div>
+                            </div>
+                            <h4 class="col-md-12 mb-4 text-success">HEART & LUNGS</h4>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">tubercolosis</label><br>
+                                    @Html.DisplayFor(model => model.HLA)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.HLAAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">asthma</label><br>
+                                    @Html.DisplayFor(model => model.HLB)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.HLBAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">shortness of breath</label><br>
+                                    @Html.DisplayFor(model => model.HLC)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.HLCAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">pain or pressure in chest</label><br>
+                                    @Html.DisplayFor(model => model.HLD)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.HLDAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">chronic cough</label><br>
+                                    @Html.DisplayFor(model => model.HLE)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.HLEAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">palpitation or pounding heart</label><br>
+                                    @Html.DisplayFor(model => model.HLF)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.HLFAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">heart trouble or murmur</label><br>
+                                    @Html.DisplayFor(model => model.HLG)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.HLGAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">high blood pressure</label><br>
+                                    @Html.DisplayFor(model => model.HLH)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.HLHAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">pneumonia</label><br>
+                                    @Html.DisplayFor(model => model.HLI)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.HLIAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Others</label><br>
+                                    @Html.DisplayFor(model => model.HLJ)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.HLJAge)
+                                </div>
+                            </div>
+                            <h4 class="col-md-12 mb-4 text-success">ABDOMEN</h4>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">ulcer of stomach or duodenum</label><br>
+                                    @Html.DisplayFor(model => model.AbdomenA)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.AbdomenAAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">diarrhea, chronic or recurrent</label><br>
+                                    @Html.DisplayFor(model => model.AbdomenB)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.AbdomenBAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">gall bladder diesase</label><br>
+                                    @Html.DisplayFor(model => model.AbdomenC)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.AbdomenCAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">jaundice</label><br>
+                                    @Html.DisplayFor(model => model.AbdomenD)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.AbdomenDAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">tumor growth, cyst, cancer</label><br>
+                                    @Html.DisplayFor(model => model.AbdomenE)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.AbdomenEAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">hernia(rupture)</label><br>
+                                    @Html.DisplayFor(model => model.AbdomenF)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.AbdomenFAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">appendicitis operation</label><br>
+                                    @Html.DisplayFor(model => model.AbdomenG)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.AbdomenGAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">hemorrhoids(piles) or rectal disease</label><br>
+                                    @Html.DisplayFor(model => model.AbdomenH)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.AbdomenHAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">frequent painful urination</label><br>
+                                    @Html.DisplayFor(model => model.AbdomenI)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.AbdomenIAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">kidney stone or blood in urine</label><br>
+                                    @Html.DisplayFor(model => model.AbdomenJ)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.AbdomenJAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">sugar or albumin in urine</label><br>
+                                    @Html.DisplayFor(model => model.AbdomenK)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.AbdomenKAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">abdominal pain</label><br>
+                                    @Html.DisplayFor(model => model.AbdomenL)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.AbdomenLAge)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab">
+                        <div class="row">
+                            <h3 class="col-md-12 mb-4 text-success">Review of System</h3>
+                            <h6 class="col-md-12 mb-4">Have your child ever had or has any of the following? If YES, at what age?</h6>
+                            <h4 class="col-md-12 mb-4 text-success">BONE JOINT</h4>
+
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">swollen or painful joints</label><br>
+                                    @Html.DisplayFor(model => model.BoneJointA)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.BoneJointAAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">worn neck or back brace support</label><br>
+                                    @Html.DisplayFor(model => model.BoneJointB)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.BoneJointBAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">bone or joint disability or deformity</label><br>
+                                    @Html.DisplayFor(model => model.BoneJointC)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.BoneJointCAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">loss of arm, leg, finger or toe</label><br>
+                                    @Html.DisplayFor(model => model.BoneJointD)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.BoneJointDAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">painful or trick shoulder or elbow</label><br>
+                                    @Html.DisplayFor(model => model.BoneJointE)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.BoneJointEAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">tricked or locked knee</label><br>
+                                    @Html.DisplayFor(model => model.BoneJointF)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.BoneJointFAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">varicose veins</label><br>
+                                    @Html.DisplayFor(model => model.BoneJointG)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.BoneJointGAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">foot trouble</label><br>
+                                    @Html.DisplayFor(model => model.BoneJointH)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.BoneJointHAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">osteomyelitis</label><br>
+                                    @Html.DisplayFor(model => model.BoneJointI)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.BoneJointIAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">paralysis(including poliomyelitis)</label><br>
+                                    @Html.DisplayFor(model => model.BoneJointJ)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.BoneJointJAge)
+                                </div>
+                            </div>
+                            <h4 class="col-md-12 mb-4 text-success">NERVOUS SYSTEM</h4>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">convulsion or epilepsy</label><br>
+                                    @Html.DisplayFor(model => model.NervousSystemA)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.NervousSystemAAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">difficulty in going to sleep</label><br>
+                                    @Html.DisplayFor(model => model.NervousSystemB)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.NervousSystemBAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">excessive moods of gloom or cheerfulness</label><br>
+                                    @Html.DisplayFor(model => model.NervousSystemC)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.NervousSystemCAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">previous psychiatric treatment</label><br>
+                                    @Html.DisplayFor(model => model.NervousSystemD)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.NervousSystemDAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">difficulty in concentration</label><br>
+                                    @Html.DisplayFor(model => model.NervousSystemE)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.NervousSystemEAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">loss of memory or amnesia</label><br>
+                                    @Html.DisplayFor(model => model.NervousSystemF)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.NervousSystemFAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">excessive sleepiness</label><br>
+                                    @Html.DisplayFor(model => model.NervousSystemG)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.NervousSystemGAge)
+                                </div>
+                            </div>
+                            <h4 class="col-md-12 mb-4 text-success">CHRONIC DISEASES</h4>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">diabetes</label><br>
+                                    @Html.DisplayFor(model => model.ChronicDiseasesA)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.ChronicDiseasesAAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">recurrent boils</label><br>
+                                    @Html.DisplayFor(model => model.ChronicDiseasesB)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.ChronicDiseasesBAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">recent gain or loss of weight</label><br>
+                                    @Html.DisplayFor(model => model.ChronicDiseasesC)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.ChronicDiseasesCAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">chronic skin disease</label><br>
+                                    @Html.DisplayFor(model => model.ChronicDiseasesD)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.ChronicDiseasesDAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">rheumatic fever</label><br>
+                                    @Html.DisplayFor(model => model.ChronicDiseasesE)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.ChronicDiseasesEAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Others</label><br>
+                                    @Html.DisplayFor(model => model.ChronicDiseasesF)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.ChronicDiseasesFAge)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="row">
+                            <h3 class="col-md-12 mb-4 text-success">Review of System</h3>
+                            <h6 class="col-md-12 mb-4">Have your child ever had or has any of the following? If YES, at what age?</h6>
+                            <h4 class="col-md-12 mb-4 text-success">INFECTIOUS DISEASES</h4>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">infectious hepatitis(liver disease)</label><br>
+                                    @Html.DisplayFor(model => model.InfectiousDiseasesA)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.InfectiousDiseasesAAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">infectious mononucleosis</label><br>
+                                    @Html.DisplayFor(model => model.InfectiousDiseasesB)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.InfectiousDiseasesBAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">malaria</label><br>
+                                    @Html.DisplayFor(model => model.InfectiousDiseasesC)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.InfectiousDiseasesCAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">mumps</label><br>
+                                    @Html.DisplayFor(model => model.InfectiousDiseasesD)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.InfectiousDiseasesDAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">venereal disease</label><br>
+                                    @Html.DisplayFor(model => model.InfectiousDiseasesE)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.InfectiousDiseasesEAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">whooping cough</label><br>
+                                    @Html.DisplayFor(model => model.InfectiousDiseasesF)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.InfectiousDiseasesFAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">chicken pox</label><br>
+                                    @Html.DisplayFor(model => model.InfectiousDiseasesG)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.InfectiousDiseasesGAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">rubella(german measles)</label><br>
+                                    @Html.DisplayFor(model => model.InfectiousDiseasesH)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.InfectiousDiseasesHAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">meningitis</label><br>
+                                    @Html.DisplayFor(model => model.InfectiousDiseasesI)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.InfectiousDiseasesIAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">scarlet fever</label><br>
+                                    @Html.DisplayFor(model => model.InfectiousDiseasesJ)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.InfectiousDiseasesJAge)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Others</label><br>
+                                    @Html.DisplayFor(model => model.InfectiousDiseasesK)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.InfectiousDiseasesKAge)
+                                </div>
+                            </div>
+                            <h4 class="col-md-12 mb-4 text-success">DID YOUR CHILD TAKE ANY MEDICINE SUCH AS:</h4>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">insulin</label><br>
+                                    @Html.DisplayFor(model => model.MedicineA)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.MedicineAAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">thyroid medications</label><br>
+                                    @Html.DisplayFor(model => model.MedicineB)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.MedicineBAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">dilantin</label><br>
+                                    @Html.DisplayFor(model => model.MedicineC)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.MedicineCAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">phenobarbital</label><br>
+                                    @Html.DisplayFor(model => model.MedicineD)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.MedicineDAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">digitalis</label><br>
+                                    @Html.DisplayFor(model => model.MedicineE)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.MedicineEAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">allergy injections</label><br>
+                                    @Html.DisplayFor(model => model.MedicineF)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.MedicineFAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">penicillin</label><br>
+                                    @Html.DisplayFor(model => model.MedicineG)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.MedicineGAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">tranquilizers</label><br>
+                                    @Html.DisplayFor(model => model.MedicineH)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.MedicineHAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Others</label><br>
+                                    @Html.DisplayFor(model => model.MedicineI)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.MedicineIAge)
+                                </div>
+                            </div>
+                            <h4 class="col-md-12 mb-4 text-success">DID YOUR CHILD SUFFER FROM AN UNFAVORABLE REACTION TO:</h4>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">penicillin</label><br>
+                                    @Html.DisplayFor(model => model.UnfavorableA)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.UnfavorableAAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">horse serum(e.g. antitoxin)</label><br>
+                                    @Html.DisplayFor(model => model.UnfavorableB)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.UnfavorableBAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">procaine or novocaine</label><br>
+                                    @Html.DisplayFor(model => model.UnfavorableC)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.UnfavorableCAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">antibiotics</label><br>
+                                    @Html.DisplayFor(model => model.UnfavorableD)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.UnfavorableDAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label">sulfa</label><br>
+                                    @Html.DisplayFor(model => model.UnfavorableE)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.UnfavorableEAge)
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">Others</label><br>
+                                    @Html.DisplayFor(model => model.UnfavorableF)
+                                </div>
+                            </div>
+                            <div class="col-md-7 mb-4">
+                                <div class="form-outline text-center">
+                                    <label class="form-label" for="">AGE</label><br>
+                                    @Html.DisplayFor(model => model.UnfavorableFAge)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*<div class="tab">
+                        <div class="row">
+
+                            <div class="col-md-12 mb-4">
+                                <div class="form-outline">
+                                    <h4 class="col-md-12 mb-4 text-center text-success">CONSENT FOR TREATMENT</h4>
+                                    <label class="form-label" for="">
+                                        I hereby authorize and give my consent to BCAS health care providers to examine and/or treat my child for minur injury
+                                        or illness. In the event of an emergency, I give permission to the school health care provider to secure appropriate treatment, including transport
+                                        to the nearest hospital, if necessary. I also allow any school health care provider to release any PERTINENT medical information to other health care providers
+                                        that may be necessary for treatment in such eventuality.
+                                    </label>
+                                    <label class="form-label" for="">
+                                        <br>Furthermore, I hereby state that the above information are true and correct to the best of my knowledge and I shall not hold the
+                                        school and its personnel responsible for any information that I may have neglected consciously or unconsciously. <br><br>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <input type="text" id="ConcentName" class="form-control form-control-lg" />
+                                    <label class="form-label" for="MotherName">Name of Parent or Guardian</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline text-center">
+                                    <select class="form-control form-control-lg" id="ConsentRelationship">
+                                        <option value="None"> </option>
+                                        <option value="Relatives">Relatives</option>
+                                        <option value="Parent">Parent</option>
+                                        <option value="Sibling">Sibling</option>
+                                    </select>
+                                    <label class="form-label" for="">Relation to the Student</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-1 mb-4">
+                                <div class="form-outline text-center">
+                                    <input type="checkbox" id="vehicle1" name="vehicle1" style="transform: scale(1.7);">
+                                </div>
+                            </div>
+
+                            <div class="col-md-11 mb-4">
+                                <div class="form-outline">
+                                    <label class="form-label" for="">By clicking here, I state that I have read and understood the consent for treatment.</label>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>*@
+
+                    <div style="overflow:auto;">
+                        <div style="float:right;">
+                            <button type="button" id="prevBtn" class="btn btn-secondary" onclick="nextPrev(-1)">Previous</button>
+                            <button type="button" id="nextBtn" class="btn btn-primary" onclick="nextPrev(1)">Next</button>
+                        </div>
+                    </div>
+
+                    <!-- Circles which indicates the steps of the form: -->
+                    <div style="text-align:center;margin-top:40px;">
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        @*<span class="step"></span>*@
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/CustomScript/HealthRecord.js"></script>
+</form>
+<script type="text/javascript">
+    @*function showDiv(select){
+        if (@Model.Sex == 1)
+            {
+                document.getElementById('FemaleOnly').style.display = "block";
+                document.getElementById('MaleOnly').style.display = "none";
+
+            }
+        else
+            {
+                document.getElementById('FemaleOnly').style.display = "none";
+                document.getElementById('MaleOnly').style.display = "block";
+            }
+    }*@
+
+    //function enableDisable(select){
+    //    if (select.value == 2) {
+    //        document.getElementById("CancerRelation").disabled = false;
+    //        document.getElementById("HeartRelationProblem").disabled = false;
+    //    }
+    //    else
+    //    {
+    //        document.getElementById("CancerRelation").disabled = true;
+    //        document.getElementById("HeartRelationProblem").disabled = true;
+    //    }
+    //}
+</script>
+<style>
+    #regForm {
+        background-color: #ffffff;
+        padding: 40px;
+        min-width: 50px;
+    }
+
+    label {
+        color: green;
+        font-weight: 700;
+    }
+
+    DisplayFor {
+        color: blue;
+    }
+    /* Style the input fields */
+    input {
+        padding: 10px;
+        width: 100%;
+        font-size: 17px;
+        font-family: Raleway;
+        border: 1px solid #aaaaaa;
+    }
+
+        /* Mark input boxes that gets an error on validation: */
+        input.invalid {
+            background-color: #ffdddd;
+        }
+
+    /* Hide all steps by default: */
+    .tab {
+        display: none;
+    }
+
+    /* Make circles that indicate the steps of the form: */
+    .step {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbbbbb;
+        border: none;
+        border-radius: 50%;
+        display: inline-block;
+        opacity: 0.5;
+    }
+
+        /* Mark the active step: */
+        .step.active {
+            opacity: 1;
+        }
+
+        /* Mark the steps that are finished and valid: */
+        .step.finish {
+            background-color: #04AA6D;
+        }
+</style>
+
+<script>
+        var currentTab = 0; // Current tab is set to be the first tab (0)
+        showTab(currentTab); // Display the current tab
+
+        function showTab(n) {
+            // This function will display the specified tab of the form ...
+            var x = document.getElementsByClassName("tab");
+            x[n].style.display = "block";
+            // ... and fix the Previous/Next buttons:
+            if (n == 0) {
+                document.getElementById("prevBtn").style.display = "none";
+            } else {
+                document.getElementById("prevBtn").style.display = "inline";
+            }
+
+            console.log("x.length:" + x.length)
+
+            //switch (n)
+            //{
+            //    case 1:
+            //        console.log("Case 1:" + n)
+            //        document.getElementById("nextBtn").innerHTML = "Next";
+            //        document.getElementById("nextBtn").addEventListener("click", SaveHealthRecord);
+            //        break;
+
+            //    case 2:
+            //        console.log("Case 2:" + n)
+            //        document.getElementById("nextBtn").innerHTML = "Next";
+            //        document.getElementById("nextBtn").addEventListener("click", SavePastMedicalHistory);
+            //        break;
+
+            //    case 3:
+            //        console.log("Case 3:" + n)
+            //        document.getElementById("nextBtn").innerHTML = "Next";
+            //        document.getElementById("nextBtn").addEventListener("click", SaveFamilyMedicalHistory);
+            //        break;
+
+            //    case 4:
+            //        console.log("Case 4:" + n)
+            //        document.getElementById("nextBtn").innerHTML = "Next";
+            //        document.getElementById("nextBtn").addEventListener("click", SavePsychologicalHistory);
+            //        break;
+
+            //    case 5:
+            //        console.log("Case 5:" + n)
+            //        document.getElementById("nextBtn").innerHTML = "Next";
+            //        document.getElementById("nextBtn").addEventListener("click", SaveMaleorFemale);
+            //        break;
+
+            //    case double.NaN:
+            //        Console.WriteLine("Failed measurement.");
+            //        break;
+
+            //    default:
+            //        Console.WriteLine($"Measured value is {measurement}.");
+            //        break;
+            //}
+
+            if (n == (x.length - 1)) {
+                document.getElementById("nextBtn").innerHTML = "Back to Front";
+                document.getElementById("nextBtn").addEventListener("click");
+            } else {
+                document.getElementById("nextBtn").innerHTML = "Next";
+            }
+            // ... and run a function that displays the correct step indicator:
+            fixStepIndicator(n)
+        }
+
+        function nextPrev(n) {
+            // This function will figure out which tab to display
+            var x = document.getElementsByClassName("tab");
+            // Exit the function if any field in the current tab is invalid:
+            if (n == 1 && !validateForm()) return false;
+            // Hide the current tab:
+            x[currentTab].style.display = "none";
+            // Increase or decrease the current tab by 1:
+            currentTab = currentTab + n;
+            // if you have reached the end of the form... :
+            if (currentTab >= x.length) {
+                //...the form gets submitted:
+                document.getElementById("regForm").submit();
+                return false;
+            }
+            // Otherwise, display the correct tab:
+            showTab(currentTab);
+        }
+
+        function validateForm() {
+            // This function deals with validation of the form fields
+            var x, y, i, valid = true;
+            x = document.getElementsByClassName("tab");
+            y = x[currentTab].getElementsByTagName("input");
+            //A loop that checks every input field in the current tab:
+            for (i = 0; i < y.length; i++) {
+                // If a field is empty...
+                if (y[i].value == "") {
+                    // add an "invalid" class to the field:
+                    y[i].className += " invalid";
+                    // and set the current valid status to false:
+                    valid = false;
+                }
+            }
+            // If the valid status is true, mark the step as finished and valid:
+            if (valid) {
+                document.getElementsByClassName("step")[currentTab].className += " finish";
+            }
+            return valid; // return the valid status
+        }
+
+        function fixStepIndicator(n) {
+            // This function removes the "active" class of all steps...
+            var i, x = document.getElementsByClassName("step");
+            for (i = 0; i < x.length; i++) {
+                x[i].className = x[i].className.replace(" active", "");
+            }
+            //... and adds the "active" class to the current step:
+            x[n].className += " active";
+        }
+</script>
+
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

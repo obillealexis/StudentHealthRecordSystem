@@ -1,0 +1,1840 @@
+﻿@model IEnumerable<DatabaseDriver.DATA.PublicHealthRecordTable>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sex)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Birthdate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Birthplace)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nationality)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Religion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FatherName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FatherOccupation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FatherContactNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MotherName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MotherOccupation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MotherContactNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GuardianName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GuardianOccupation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GuardianContactNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HospitalofChoice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddressofHospital)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HospitalContactNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameofFamilyDoctor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Allergy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PastAsthma)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Anemia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BleedingProblem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BehavioralProblem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HearingProblem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpeechProblem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VisualProblem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecurrentIndigestion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Jaundice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EatingDisorder)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChickenFox)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DengueFever)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThypoidFever)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Measles)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mumps)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pneumonia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrimaryComplex)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EarDischarge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tonsilitis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Parasitism)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Insomnias)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HeartDisease)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KidneyDisease)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Convulsion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Epilepsy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PastDiabetes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fainting)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fractures)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Scolosis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hospitalization)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Operation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cancer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CancerRelation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HeartProblem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HeartRelationProblem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HighBlood)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HighBloodRelation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FamilyDiabetes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiabetesRelation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KidneyProblem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KidneyProblemRelation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SeizureDisorder)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SeizureDisorderRelation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tubercolosis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TubercolosisRelation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FamilyAsthma)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AsthmaRelation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BleedingDisorder)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BleedingDisorderRelation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MentalDisorder)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MentalDisorderRelation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Stroke)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StrokeRelation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Obesity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ObesityRelation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Physical)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhysicalRelevantDetails)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sexual)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SexualRelevantDetails)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Verval)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VervalRelevantDetails)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AOOOGE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AOOOPH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hernia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HerniaDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Circumcision)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CircumcisionDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AOOOM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RegularCycle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Flow)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Discomfort)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HeadA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HeadB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HeadC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EyesA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EyesB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EyesC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTJ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NeckA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NeckB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HLA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HLB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HLC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HLD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HLE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HLF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HLG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HLH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HLI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HLJ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbdomenA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbdomenB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbdomenC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbdomenD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbdomenE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbdomenF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbdomenG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbdomenH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbdomenI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbdomenJ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbdomenK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbdomenL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BoneJointA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BoneJointB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BoneJointC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BoneJointD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BoneJointE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BoneJointF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BoneJointG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BoneJointH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BoneJointI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BoneJointJ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NervousSystemA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NervousSystemB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NervousSystemC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NervousSystemD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NervousSystemE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NervousSystemF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NervousSystemG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChronicDiseasesA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChronicDiseasesB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChronicDiseasesC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChronicDiseasesD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChronicDiseasesE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChronicDiseasesF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfectiousDiseasesA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfectiousDiseasesB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfectiousDiseasesC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfectiousDiseasesD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfectiousDiseasesE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfectiousDiseasesF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfectiousDiseasesG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfectiousDiseasesH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfectiousDiseasesI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfectiousDiseasesJ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfectiousDiseasesK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicineA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicineB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicineC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicineD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicineE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicineF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicineG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicineH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicineI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnfavorableA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnfavorableB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnfavorableC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnfavorableD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnfavorableE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnfavorableF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HeadAAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HeadBAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HeadCAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EyesAAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EyesBAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EyesCAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTAAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTBAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTCAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTDAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTEAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTFAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTGAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTHAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTIAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTJAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTKAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTLAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTMAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTNAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTOAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NeckAAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NeckBAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HLAAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HLBAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HLCAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HLDAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HLEAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HLFAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HLGAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HLHAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HLIAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HLJAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbdomenAAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbdomenBAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbdomenCAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbdomenDAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbdomenEAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbdomenFAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbdomenGAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbdomenHAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbdomenIAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbdomenJAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbdomenKAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbdomenLAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BoneJointAAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BoneJointBAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BoneJointCAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BoneJointDAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BoneJointEAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BoneJointFAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BoneJointGAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BoneJointHAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BoneJointIAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BoneJointJAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NervousSystemAAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NervousSystemBAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NervousSystemCAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NervousSystemDAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NervousSystemEAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NervousSystemFAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NervousSystemGAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChronicDiseasesAAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChronicDiseasesBAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChronicDiseasesCAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChronicDiseasesDAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChronicDiseasesEAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChronicDiseasesFAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfectiousDiseasesAAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfectiousDiseasesBAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfectiousDiseasesCAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfectiousDiseasesDAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfectiousDiseasesEAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfectiousDiseasesFAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfectiousDiseasesGAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfectiousDiseasesHAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfectiousDiseasesIAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfectiousDiseasesJAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfectiousDiseasesKAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicineAAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicineBAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicineCAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicineDAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicineEAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicineFAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicineGAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicineHAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicineIAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnfavorableAAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnfavorableBAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnfavorableCAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnfavorableDAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnfavorableEAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnfavorableFAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OMIOS1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OMIOS11)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OMIOS12)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OMIOS13)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OMIOS2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OMIOSB22)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OMIOS3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OMIOS33)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OMIOS34)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OMIOS35)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OMIOS36)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OMIOS4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OMIOS44)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OMIOS5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OMIOS6)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OMIOS66)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConcentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConsentRelationship)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MiddleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sex)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Birthdate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Birthplace)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nationality)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Religion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FatherName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FatherOccupation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FatherContactNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MotherName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MotherOccupation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MotherContactNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GuardianName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GuardianOccupation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GuardianContactNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HospitalofChoice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AddressofHospital)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HospitalContactNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameofFamilyDoctor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Allergy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PastAsthma)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Anemia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BleedingProblem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BehavioralProblem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HearingProblem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpeechProblem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VisualProblem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecurrentIndigestion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Jaundice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EatingDisorder)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChickenFox)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DengueFever)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThypoidFever)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Measles)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mumps)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pneumonia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrimaryComplex)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EarDischarge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tonsilitis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Parasitism)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Insomnias)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HeartDisease)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KidneyDisease)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Convulsion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Epilepsy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PastDiabetes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fainting)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fractures)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Scolosis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hospitalization)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Operation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cancer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CancerRelation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HeartProblem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HeartRelationProblem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HighBlood)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HighBloodRelation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FamilyDiabetes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DiabetesRelation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KidneyProblem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KidneyProblemRelation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SeizureDisorder)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SeizureDisorderRelation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tubercolosis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TubercolosisRelation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FamilyAsthma)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AsthmaRelation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BleedingDisorder)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BleedingDisorderRelation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MentalDisorder)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MentalDisorderRelation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stroke)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StrokeRelation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Obesity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ObesityRelation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Physical)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhysicalRelevantDetails)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sexual)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SexualRelevantDetails)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Verval)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VervalRelevantDetails)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AOOOGE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AOOOPH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hernia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HerniaDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Circumcision)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CircumcisionDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AOOOM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RegularCycle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Flow)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Discomfort)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HeadA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HeadB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HeadC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EyesA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EyesB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EyesC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTJ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NeckA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NeckB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLJ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbdomenA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbdomenB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbdomenC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbdomenD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbdomenE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbdomenF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbdomenG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbdomenH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbdomenI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbdomenJ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbdomenK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbdomenL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoneJointA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoneJointB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoneJointC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoneJointD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoneJointE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoneJointF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoneJointG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoneJointH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoneJointI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoneJointJ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NervousSystemA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NervousSystemB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NervousSystemC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NervousSystemD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NervousSystemE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NervousSystemF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NervousSystemG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChronicDiseasesA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChronicDiseasesB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChronicDiseasesC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChronicDiseasesD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChronicDiseasesE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChronicDiseasesF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfectiousDiseasesA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfectiousDiseasesB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfectiousDiseasesC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfectiousDiseasesD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfectiousDiseasesE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfectiousDiseasesF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfectiousDiseasesG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfectiousDiseasesH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfectiousDiseasesI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfectiousDiseasesJ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfectiousDiseasesK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicineA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicineB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicineC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicineD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicineE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicineF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicineG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicineH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicineI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnfavorableA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnfavorableB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnfavorableC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnfavorableD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnfavorableE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnfavorableF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HeadAAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HeadBAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HeadCAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EyesAAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EyesBAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EyesCAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTAAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTBAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTCAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTDAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTEAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTFAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTGAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTHAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTIAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTJAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTKAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTLAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTMAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTNAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTOAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NeckAAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NeckBAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLAAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLBAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLCAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLDAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLEAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLFAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLGAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLHAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLIAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLJAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbdomenAAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbdomenBAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbdomenCAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbdomenDAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbdomenEAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbdomenFAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbdomenGAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbdomenHAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbdomenIAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbdomenJAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbdomenKAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbdomenLAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoneJointAAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoneJointBAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoneJointCAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoneJointDAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoneJointEAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoneJointFAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoneJointGAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoneJointHAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoneJointIAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoneJointJAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NervousSystemAAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NervousSystemBAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NervousSystemCAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NervousSystemDAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NervousSystemEAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NervousSystemFAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NervousSystemGAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChronicDiseasesAAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChronicDiseasesBAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChronicDiseasesCAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChronicDiseasesDAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChronicDiseasesEAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChronicDiseasesFAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfectiousDiseasesAAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfectiousDiseasesBAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfectiousDiseasesCAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfectiousDiseasesDAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfectiousDiseasesEAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfectiousDiseasesFAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfectiousDiseasesGAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfectiousDiseasesHAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfectiousDiseasesIAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfectiousDiseasesJAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfectiousDiseasesKAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicineAAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicineBAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicineCAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicineDAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicineEAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicineFAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicineGAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicineHAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicineIAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnfavorableAAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnfavorableBAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnfavorableCAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnfavorableDAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnfavorableEAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnfavorableFAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OMIOS1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OMIOS11)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OMIOS12)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OMIOS13)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OMIOS2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OMIOSB22)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OMIOS3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OMIOS33)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OMIOS34)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OMIOS35)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OMIOS36)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OMIOS4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OMIOS44)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OMIOS5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OMIOS6)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OMIOS66)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConcentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConsentRelationship)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
